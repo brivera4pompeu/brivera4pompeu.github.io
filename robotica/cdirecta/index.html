@@ -126,7 +126,35 @@
     aquesta classe i si escricc . seguit del nom de la id seleccionare la id. En CSS  s'ha d'escriure sempre {propietat1:valor1; propietat2:valor2}
     i davant del primer  claudator he d'escriure .nomdelaid o #nomdelaclasse-->
     <script>
-        
+        function calculatePosition() {
+            //agafar les dades introduïdes per l'usuari
+        let a1 = parseFloat(document.getElementById('a1').value); //logitud del primer braç
+        let a2 = parseFloat(document.getElementById('a2').value); //longitud del segon braç
+        let q1_deg = parseFloat(document.getElementById('q1').value); //angle en graus del primer braç
+        let q2_deg = parseFloat(document.getElementById('q2').value); //angle en graus del segon braç
+
+            /* la funció le ens permet crear veriables locals perque estan dintre de una funció (serien variables globals
+            si estiguesin a principi del codi i afectes a tot el codi) que emmagatzemen els valors introduïts per l'usuari perquè a banda
+            de fet getElementbyId aplico el metode .value per  asegurarme que agafo el valor script i aplico la funció parseFloat per convertir
+            el valor intrduit per l'usuari en un número decimal o floating point number (si hagues posat parseInt el convertiria en números enters).
+            En aquest tros de codi  de la linea 131 a la 134 hem aconseguit guardar les 4 dades geometriques del nostre robot per fer calculs de la seva 
+            posició en funció de les 4 dades introduïdes per l'usuari */
+
+        //convertir graus a radians per als calculs trigonometrics
+        let q1 = q1_deg * Math.PI / 180;
+        let q2 = q2_deg * Math.PI / 180;
+        //aixó és lo mateix que 2PI/360
+
+        //mostar les fórmules per calcular la posició del robot
+        let output = "<div class='equation'> Les equacions per calcular la posiió final del robot són</div>";
+        output += "<div class='equation'>\\[x = a_1\\cos(q_1) + a_2\\cos(q_1 + q_2) \\]</div> 
+        output += "<div class='equation'>\\[x = a_1\\sin(q_1) + a_2\\sin(q_1 + q_2) \\]</div> 
+            
+            /* Estic creant una variable anomenada output en javascript que conté un element <div> o divisor HTML dintrdel qual hi han equacions del robot
+                en llenguatgge javascript de la biblioteca (library) mathtax3 que permet veure formules matemàqiques en una web. MathJax3 utilitza \\ 
+                per avisar que comença en MathJax i té unes normes com que la _ indica subínde, si poso una \\ davant de sinus o cosinus es veu escrit com a formula */
+    
+    </script>
     <p>Em dic Brayan i sóc alumne del curs 2024-2025 de <a href="https://agora.xtec.cat/ies-pompeu-fabra-martorell/">l'institut Pompeu Fabra</a></p>
     <p>A continuació veuràs un llistat amb diferents projectes que farem durant el curs:</p>
     <ul>
