@@ -117,7 +117,7 @@
         <!-- en comtes de fer un clic al botó puc fer onddclick que obligaria a l'usuari a fer 2 clicks o puc fer que el boto s'activa quan paso persobre 
         amb el ratoli i puc fer que canvii de color o una explicació de lo que fa o tooltip o informació del que fa el botó-->
     </div>
-    <div id="outpot"></div>
+    <div id="output"></div>
     <canvas id="robotCanvas" width_"400" height="400"></canvas>
     <!--id ens serveis per identificar qualsevol element html i no es poden repetir en la mateixa pàgina, a vegades necesitem fer servir class
     perque volem repetir les  característiques d'aquesta classe diverses vegades a la pàgina. Quan escric HTLM id i vull agafar-ho des de JavaScript
@@ -153,7 +153,24 @@
             /* Estic creant una variable anomenada output en javascript que conté un element <div> o divisor HTML dintrdel qual hi han equacions del robot
                 en llenguatgge javascript de la biblioteca (library) mathtax3 que permet veure formules matemàqiques en una web. MathJax3 utilitza \\ 
                 per avisar que comença en MathJax i té unes normes com que la _ indica subínde, si poso una \\ davant de sinus o cosinus es veu escrit com a formula */
-    
+
+        //Substituir les variabes de les  equacions
+        output += "<div class='equation'>Substituint els valors:</div>";
+        output += `<div class='equation'>\\[x = ${a1} \\cos(${q1_deg}) + ${a2} \\ cos(${q1_deg}&deg; + ${q2_deg}&deg;) \\]</div>
+        output += `<div class='equation'>\\[y = ${a1} \\sin(${q1_deg}) + ${a2} \\ sin(${q1_deg}&deg; + ${q2_deg}&deg;) \\]</div>
+//Càlculs numèrics detallats
+            let x1 = a1 * Math.cos(q1); // Posició en X del primer braç
+            let x2 = a2 * Math.cos(q1 + q2); // Posició en X del segon braç
+            let y1 = a1 * Math.sin(q1); // Posició en Y del primer braç
+            let y2 = a2 * Math.sin(q1 + q2); // Posició en Y del segon braç
+            output += "<div class='equation'>Desglossant els càlculs:</div>
+            output += `<div class='equation'>\\[ x_1 = a_1\\cos(q_1) = ${a1} \\times \\cos($(q_1)&deg;) = $(x1.toFixed(2)}\\]</div> ;
+            output += `<div class='equation'>\\[ x_2 = a_2\\cos(q_2) = ${a2} \\times \\cos($(q_1 + q_2)&deg;) + $(q2_deg)&deg;) = $(x2.toFixed(2)}\\]</div> ;
+            output += `<div class='equation'>\\[ y_1 = a_1\\sin(q_1) = ${a1} \\times \\sin($(q_1)&deg;) = $(y1.toFixed(2)}\\]</div> ;
+            output += `<div class='equation'>\\[ y_2 = a_2\\cos(q_2) = ${a2} \\times \\sin($(q_1 + q_2)&deg;) + $(q2_deg)&deg;) = $(y2.toFixed(2)}\\]</div> ;
+   //Càlcul de les coordenades finals (x,y) de la mà del robot
+            let x = x1 + x2;
+            let y = y1 + y2;
     </script>
     <p>Em dic Brayan i sóc alumne del curs 2024-2025 de <a href="https://agora.xtec.cat/ies-pompeu-fabra-martorell/">l'institut Pompeu Fabra</a></p>
     <p>A continuació veuràs un llistat amb diferents projectes que farem durant el curs:</p>
