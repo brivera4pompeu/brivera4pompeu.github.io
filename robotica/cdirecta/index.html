@@ -171,6 +171,19 @@
    //Càlcul de les coordenades finals (x,y) de la mà del robot
             let x = x1 + x2;
             let y = y1 + y2;
+output += "<div class='equation'> Calculant els rsultats numèrics totals: </div>
+output += "<div class='equation'> \\[ x = &{x.toFixed(2)} \\] </div>";
+output += "<div class='equation'> \\[ y = &{y.toFixed(2)} \\] </div>";
+    // .toFixed(2) és un metode d'arrodoniment que apliquem amb la sintaxi del punt a la lletra x i a la lletra y que corresponen a la posició
+        final del robot. Let x = x1 +  x2; emmagatzema el valor de la posició x final en x i el $ selecciona el valor x i el posa 2 decimals
+        arrodonits amb .toFixed i els \\[ indiquen que estem escrivint  un codi MathJax3 que és un derivat de Latex per escriure  formules matemàtiques
+        que renderitzin bé a la ppantalla. output+= el que fa és sumar un element div anomenat output o sortida d'informació que al principi està buit 
+            però quan cliquem calculate comença a sortir tot el output. Ens hem d'adonar  que el div output té al seu interior molts divs anomenats equation però
+            no són "id" perquè si fosin "id" hauriem de ser 1, i són classes "/
+//Mostrar el resultat
+        document.getElementById('output').innerHTLM = output;
+        MathJax.typeset(); //Renderitzar les fórmules matemàtiques amb MahJax
+            
     </script>
     <p>Em dic Brayan i sóc alumne del curs 2024-2025 de <a href="https://agora.xtec.cat/ies-pompeu-fabra-martorell/">l'institut Pompeu Fabra</a></p>
     <p>A continuació veuràs un llistat amb diferents projectes que farem durant el curs:</p>
