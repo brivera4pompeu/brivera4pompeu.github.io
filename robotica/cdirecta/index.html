@@ -140,8 +140,10 @@
         <!-- en comtes de fer un clic al botó puc fer onddclick que obligaria a l'usuari a fer 2 clicks o puc fer que el boto s'activa quan paso persobre 
         amb el ratoli i puc fer que canvii de color o una explicació de lo que fa o tooltip o informació del que fa el botó-->
     </div>
-    <div id="output"></div>
-    <canvas id="robotCanvas" width_"400" height="400"></canvas>
+    <div id="output"></div> <br>
+    <div id="robotCanvas" width="400" heigth="400"></div>
+    <canvas id="robotCanvas" width="400" height="400"></canvas>
+    
     <!--id ens serveis per identificar qualsevol element html i no es poden repetir en la mateixa pàgina, a vegades necesitem fer servir class
     perque volem repetir les  característiques d'aquesta classe diverses vegades a la pàgina. Quan escric HTLM id i vull agafar-ho des de JavaScript
     escric getElementById i quan escric en HTML class i vull agafar-ho en JavaScript escric getElementByClassName. Si ho vull agafar des de
@@ -211,6 +213,20 @@
         /*Agafa un element que s'anomena robot canvas que hauria d'estar més amunt i que està situat en el div buit de sota del div buit de l'output,
         es a dir hi ha un divisor buit HTML anomenat output on surten totes les formules i un divisor buit HTML anomenat robotCanvas on sortira
         el dibuix del robot*/
+        let ctx = canvas.getContext('2d');//El dibuix ha de ser 2D i no 3D
+        ctx.clearRect(0,0,canvas.width,canvas.heigth);
+        //Netejem el canvas abans de dibuixar
+        //ctx l'hem anomenat aixi perquè significa context de canvas en 2D
+        /*Posem el punt davant de .clearRect perquè és un mètode que s'aplica al context i té 4 arguments o parametres. Els 2 primers és
+        la cantonada superior esquerra del rectangle que sempre és el punt de referència de qualsevol dibuix i la cantonada inferior dreta són
+        els 2 darrers números.
+        Quin són els 2 darrers números? Són 400 perquè són canvas.width i canvas.height
+        clearRect. significa netejar un rectangle i només necessitem 2 coordenades per dibuixar-ho, la cantonada superior esquerre i la cantonada
+        inferior dreta.*/
+        //Definim el centre del canvas i l'escala
+        let centerX = canvas.width / 2;
+        let centerY = canvas.heigth / 2;
+        let scale = 80;//Escala per dibuixar les distancies
         
     </script>
     <p>Em dic Brayan i sóc alumne del curs 2024-2025 de <a href="https://agora.xtec.cat/ies-pompeu-fabra-martorell/">l'institut Pompeu Fabra</a></p>
