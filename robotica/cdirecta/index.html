@@ -164,19 +164,18 @@
             posició en funció de les 4 dades introduïdes per l'usuari */
 
         //convertir graus a radians per als calculs trigonometrics
-        let q1 = q1_deg * Math.PI / 180;
-        let q2 = q2_deg * Math.PI / 180;
+           let q1 = q1_deg * Math.PI / 180;
+           let q2 = q2_deg * Math.PI / 180;
         //aixó és lo mateix que 2PI/360
 
         //mostar les fórmules per calcular la posició del robot
-       let output = "<div class='equation'>Les equacions per calcular la posició final del robot són:</div>";
+            let output = "<div class='equation'>Les equacions per calcular la posició final del robot són:</div>";
             output += "<div class='equation'>\\[ x = a_1 \\cos(q_1) + a_2 \\cos(q_1 + q_2) \\]</div>";
             output += "<div class='equation'>\\[ y = a_1 \\sin(q_1) + a_2 \\sin(q_1 + q_2) \\]</div>";
 
-            
-            /* Estic creant una variable anomenada output en javascript que conté un element <div> o divisor HTML dintrdel qual hi han equacions del robot
-                en llenguatgge javascript de la biblioteca (library) mathtax3 que permet veure formules matemàqiques en una web. MathJax3 utilitza \\ 
-                per avisar que comença en MathJax i té unes normes com que la _ indica subínde, si poso una \\ davant de sinus o cosinus es veu escrit com a formula */
+        /* Estic creant una variable anomenada output en javascript que conté un element <div> o divisor HTML dintrdel qual hi han equacions del robot
+        en llenguatgge javascript de la biblioteca (library) mathtax3 que permet veure formules matemàqiques en una web. MathJax3 utilitza \\ 
+        per avisar que comença en MathJax i té unes normes com que la _ indica subínde, si poso una \\ davant de sinus o cosinus es veu escrit com a formula */
 
         //Substituir les variabes de les  equacions
             output += "<div class='equation'>Substituint els valors:</div>";
@@ -191,22 +190,28 @@
             output += "<div class='equation'>\\[ x_2 = a_2 \\cos(q_1+q_2) = ${a2} \\times \\cos(${q1_deg}&deg;) + ${q2_deg}&deg;) = ${x2.toFixed(2)}\\] </div>";
             output += "<div class='equation'>\\[ y_1 = a_1 \\sin(q_1) = ${a1} \\times \\cos(${q1_deg}&deg;) = ${y1.toFixed(2)}\\] </div>";
             output += "<div class='equation'>\\[ y_2 = a_2 \\sin(q_1+q_2) = ${a2} \\times \\cos(${q1_deg}&deg;) + (${q2_deg}&deg;) = ${y2.toFixed(2)}\\] </div>";
-       //Càlcul de les coordenades finals (x,y) de la mà del robot
+        //Càlcul de les coordenades finals (x,y) de la mà del robot
             let x = x1 +x2;
             let y = y1 +y2;
             output += "<div class='equation'>Calculant els resultats numèrics totals:</div>";
             output += "<div class='equation'> \\[x = {$(x.toFixed(2))} \\] </div>";
             output += "<div class='equation'> \\[y = {$(x.toFixed(2))} \\] </div>";
-    /* .toFixed(2) és un metode d'arrodoniment que apliquem amb la sintaxi del punt a la lletra x i a la lletra y que corresponen a la posició
+        /* .toFixed(2) és un metode d'arrodoniment que apliquem amb la sintaxi del punt a la lletra x i a la lletra y que corresponen a la posició
         final del robot. Let x = x1 +  x2; emmagatzema el valor de la posició x final en x i el $ selecciona el valor x i el posa 2 decimals
         arrodonits amb .toFixed i els \\[ indiquen que estem escrivint  un codi MathJax3 que és un derivat de Latex per escriure  formules matemàtiques
         que renderitzin bé a la ppantalla. output+= el que fa és sumar un element div anomenat output o sortida d'informació que al principi està buit 
-            però quan cliquem calculate comença a sortir tot el output. Ens hem d'adonar  que el div output té al seu interior molts divs anomenats equation però
-            no són "id" perquè si fosin "id" hauriem de ser 1, i són classes*/
-//Mostrar el resultat
+        però quan cliquem calculate comença a sortir tot el output. Ens hem d'adonar  que el div output té al seu interior molts divs anomenats equation però
+        no són "id" perquè si fosin "id" hauriem de ser 1, i són classes*/
+        //Mostrar el resultat
         document.getElementById('output').innerHTML = output;
         MathJax.typeset(); //REnderitzar les fórmules matemàtiques amb MathJax
         }
+        //Dibuixar gràficament el robot amb els dos braços
+        let canvas = document.getElementById('robotCanvas');
+        /*Agafa un element que s'anomena robot canvas que hauria d'estar més amunt i que està situat en el div buit de sota del div buit de l'output,
+        es a dir hi ha un divisor buit HTML anomenat output on surten totes les formules i un divisor buit HTML anomenat robotCanvas on sortira
+        el dibuix del robot*/
+        
     </script>
     <p>Em dic Brayan i sóc alumne del curs 2024-2025 de <a href="https://agora.xtec.cat/ies-pompeu-fabra-martorell/">l'institut Pompeu Fabra</a></p>
     <p>A continuació veuràs un llistat amb diferents projectes que farem durant el curs:</p>
