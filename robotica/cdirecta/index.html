@@ -11,7 +11,7 @@
         aconseguim separar l'esquelet on està tot el contingut estatic que està en llenguatge HTML del script.js on està tota la activitat
         interactiva, de tots els estils (tipus de lletra, colors, marges...) en llenguatge CSS. Així tinc tres arxius un index.html que cridarà
         a l'style.css i a l'escript.js */
-               /*El CSS significa Cascade Style Sheets o fulles d'estil en cascada i sempre té la mateixa estructura:
+        /*El CSS significa Cascade Style Sheets o fulles d'estil en cascada i sempre té la mateixa estructura:
         nometiquetahtml{propietat1:valor1;propietat2:valor2;}
         Per exemple s'aplica el nom de l'etiqueta HTML "body" una propietat relacionada amb els marges anomenada
         padding que prové del model CSS Box o model de caixes CSS a l'interior de la caixa tenim el contingut o "content",
@@ -21,26 +21,24 @@
         el tercer a baix. Si afegim quatre números el primer anirà a dalt, el segon a la dreta, el tercer a baix i l'ultim a l'esquerra.
         Si no recordem l'ordre podem escriure"border-top:10px", "border-bottom:20px", border-right:10px", border-left:30px".
         "Padding" és similar a "border" o a "margin"*/
-
         Body {
- font-family: "Monaco", monospace;
+        font-family: "Monaco", monospace;
             /*Hi ha 3 tipus principals de lletres Serif, Sans-Serif i Monospace, la diferència entre elles es que el Serif té formes
             més detallades i la Sans-serif no tenen aquests detalls, ja que Sans significa sense. Monospace és molt important per al codi
             perquè l'amplada de cada lletra sempre és la mateixa. Altres famílies són Cursive i Fantasy. 
             També podem crear o importar tipus de lletres totalment diferents i son arxius que hem d'importar amb el format OTF (OpenTypeFormat)
             o TTF (TrueTypeFormat), per exemple, ana Vives té síndrome de Down i lletra pròpia*/
-
-    padding: 0; /* Elimina l'espai extra al voltant del cos */
+        padding: 0; /* Elimina l'espai extra al voltant del cos */
         border:10px 50px;
         margin:20px;
 }
-.container-fluid {
-    max-width: 100%; /* Assegura que la navbar ocupa tota l'amplada */
-/*Container-fluid té un punt davant i aquest punt significa que és una "class", és a dir que hi ha un HTML que 
-    posa "class='container-fluid';" i per exemple podria ser un div o divisor de coontingut.
-    Aquest container té una propietat que es diu "max-width" que significa amplada màxima i el valor que li 
-    hem de donar és 100% de l'amplada. Si fos una id posaria un # i només hi hauria una, pero com és una class
-    pot ser moltes vegades repetida.*/
+        .container-fluid {
+        max-width: 100%; /* Assegura que la navbar ocupa tota l'amplada */
+        /*Container-fluid té un punt davant i aquest punt significa que és una "class", és a dir que hi ha un HTML que 
+        posa "class='container-fluid';" i per exemple podria ser un div o divisor de coontingut.
+        Aquest container té una propietat que es diu "max-width" que significa amplada màxima i el valor que li 
+        hem de donar és 100% de l'amplada. Si fos una id posaria un # i només hi hauria una, pero com és una class
+        pot ser moltes vegades repetida.*/
 
 }
 
@@ -181,8 +179,8 @@
 
         //Substituir les variabes de les  equacions
             output += "<div class='equation'>Substituint els valors:</div>";
-            output += `<div class='equation'>\\[ x = ${a1} \\cos(${q1_deg}°) + ${a2} \\cos(${q1_deg}° + ${q2_deg}°) \\]</div>`;
-            output += `<div class='equation'>\\[ y = ${a1} \\sin(${q1_deg}°) + ${a2} \\sin(${q1_deg}° + ${q2_deg}°) \\]</div>`;
+            output += "<div class='equation'>\\[ x = ${a1} \\cos(${q1_deg}°) + ${a2} \\cos(${q1_deg}° + ${q2_deg}°) \\]</div>`;
+            output += "<div class='equation'>\\[ y = ${a1} \\sin(${q1_deg}°) + ${a2} \\sin(${q1_deg}° + ${q2_deg}°) \\]</div>`;
         //Càlculs numèrics 
             let x1 =a1*Math.cos(q1);//Posició en X del primer braç
             let x2 =a2*Math.cos(q1+q2);//Posició en X del segon braç
