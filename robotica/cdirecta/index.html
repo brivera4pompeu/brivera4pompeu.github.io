@@ -231,10 +231,22 @@ canvas{
         clearRect. significa netejar un rectangle i només necessitem 2 coordenades per dibuixar-ho, la cantonada superior esquerre i la cantonada
         inferior dreta.*/
         //Definim el centre del canvas i l'escala
-        let centerX = canvas.width / 2;
-        let centerY = canvas.heigth / 2;
+        let centerX = canvas.width / 2;//Punt mitjà de X
+        let centerY = canvas.heigth / 2;//Punt mitjà de Y
+        // si el canvas fa 400, 400 centerX i centerY serien 200.
         let scale = 80;//Escala per dibuixar les distancies
-        
+        /*La escala del dibuix vol dir que si poso una unitat física en la entrada del text corresponent a a1 o a2 equival a 80 píxels en el canvas. Per exempple
+        si el robot té un braç de un metre serien 80 pixels.*/
+        let x1_screen = centerX + x1*scale;
+        let y1_screen = centerY + y1*scale;
+        let x2_screen = centerX + x2*scale;
+        let y2_screen = centerY + y2*scale;
+        /* x1_screen, y1_screen, x2_screen, y2_screen són les coordenades del robot que comencem pel centre perquè el braç del robot es pot moure 
+        en qualsevol direcció i el que faig és aplicar l'escala a les distàncies dels braços introduïdes*/
+        /* Aqui lo que farem és dibuiar el primer braç */
+        ctx.beginPath();
+        /* Estic aplicant el mètode de .beginPath amb la sintaxi del punt a ctx que és el context(ctx) de dibuix 2d i el que fa és iniciar un nou camí
+        de dibuix(Path) i es prepara per dibuixar una línia
     </script>
     <p>Em dic Brayan i sóc alumne del curs 2024-2025 de <a href="https://agora.xtec.cat/ies-pompeu-fabra-martorell/">l'institut Pompeu Fabra</a></p>
     <p>A continuació veuràs un llistat amb diferents projectes que farem durant el curs:</p>
