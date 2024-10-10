@@ -246,7 +246,28 @@ canvas{
         /* Aqui lo que farem és dibuiar el primer braç */
         ctx.beginPath();
         /* Estic aplicant el mètode de .beginPath amb la sintaxi del punt a ctx que és el context(ctx) de dibuix 2d i el que fa és iniciar un nou camí
-        de dibuix(Path) i es prepara per dibuixar una línia
+        de dibuix(Path) i es prepara per dibuixar una línia */
+        ctx.moveTo(centerX,centerY);
+        /*Estic avisant que es mogui al centre del canvas per començar a dibuixar des del centre del dibuix*/
+        ctx.lineTo(x1_screen,y1_screen);
+        /*Això vol dir: dibuixa una linia des del centre del canvas que és l'inici del primer braç fins a la posició x1_screen i y1_screen que és 
+        el final del primer braç*/
+        ctx.strokeStyle='blue';
+        /*strokeStyle indica el color de la linia, en aquest cas blau pel primer braç*/
+        ctx.lineWidth='5';
+        /*lineWidth és l'amplada de la linia en píxels, en aquest cas 5px de gruix*/
+        ctx.stroke();
+        /*stroke és una funció, se que és una funció perquè té doble parèntesis i dintre dels parèntesis no hi ha paràmetres, amb aquesta funció aconseguim
+        dibuixar la linia al canvas*/
+        /*A partir d'aqui dibuixem el segon braç i el vull verd amb 5px de gruix*/
+        ctx.beginPath();//Com té 2 parèntesis també és una funció
+        ctx.moveTo(x1_screen,y1_screen);//Ara posem que comenci al final del primer braç perquè és l'inici del segon braç
+        ctx.lineTo(x2_screen,y2_screen);/Ara la linia no pot anar a x1_screen,y1_screen(surt d'aqui) , aixi que posem que 
+            vagi cap a x2_screen,y2_screen que és el final del segon braç
+        ctx.strokeStyle='green';
+        ctx.lineWidth='5';
+        ctx.stroke();
+        
     </script>
     <p>Em dic Brayan i sóc alumne del curs 2024-2025 de <a href="https://agora.xtec.cat/ies-pompeu-fabra-martorell/">l'institut Pompeu Fabra</a></p>
     <p>A continuació veuràs un llistat amb diferents projectes que farem durant el curs:</p>
