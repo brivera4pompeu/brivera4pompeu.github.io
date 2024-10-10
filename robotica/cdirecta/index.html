@@ -154,6 +154,7 @@ canvas{
     aquesta classe i si escricc . seguit del nom de la id seleccionare la id. En CSS  s'ha d'escriure sempre {propietat1:valor1; propietat2:valor2}
     i davant del primer  claudator he d'escriure .nomdelaid o #nomdelaclasse-->
     <script>
+        let x1;
         function calculatePosition() {
             //agafar les dades introduïdes per l'usuari
         let a1 = parseFloat(document.getElementById('a1').value); //logitud del primer braç
@@ -188,7 +189,7 @@ canvas{
             output += `<div class='equation'>\\[ x = ${a1} \\cos(${q1_deg}°) + ${a2} \\cos(${q1_deg}° + ${q2_deg}°) \\]</div>`;
             output += `<div class='equation'>\\[ y = ${a1} \\sin(${q1_deg}°) + ${a2} \\sin(${q1_deg}° + ${q2_deg}°) \\]</div>`;
         //Càlculs numèrics 
-            let x1 =a1*Math.cos(q1);//Posició en X del primer braç
+            let x1 =a1 * Math.cos(q1);//Posició en X del primer braç
             let x2 =a2*Math.cos(q1+q2);//Posició en X del segon braç
             let y1 =a1*Math.sin(q1);//Posició en y del primer braç
             let y2 =a2*Math.sin(q1+q2);//Posició en Y del segon braç
