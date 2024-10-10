@@ -117,7 +117,7 @@ canvas{
     <div>
         <!--div és un divisor i conté en aquest cas unes quantes instruccions html que serveixen per introduïr dades que vulgui l'usuari-->
         <!--etiquetes i camps d'entrada per a les dades del robot-->
-        <label for="a1"> Longitud del primer braç(a1)..</label>
+        <label for="a1"> Longitud del primer braç(a1):</label>
         <!--label és una etiqueta que ens ajuda a identificar un text-->
         <input type="number" id="a1" value="2" step="0.1"><br><br>
         <!--input vol dir entrada d'informació per part de l'usuari que pot ser de molts tipus en aquest cas és  un número, 
@@ -128,14 +128,14 @@ canvas{
         la variabilitat que jo puc escriure, no puc escriure 4,32, si vulgues escriure 4,32 amb 2  decimals qué hauria d'escriure?
         hauria d'escriure step="0.01"-->
         <!--br significa "break" que deixa una linea en blanc darrera, com hi ha 2 br hi hauran 2 lineas en blanc-->
-         <label for="a2"> Longitud del primer braç(a2)..</label>
+        <label for="a2"> Longitud del segon braç(a2):</label>
           <input type="number" id="a2" value="1.5" step="0.1"><br><br>
-        <label for="q1"> angle del primer braç(q1 en graus)..</label>
+        <label for="q1"> angle del primer braç(q1, en graus):</label>
           <input type="number" id="q1" value="45" step="0.1"><br><br>
-        <label for="q2"> angle del segon braç(q2 en graus)..</label>
+        <label for="q2"> angle del segon braç(q2, en graus):</label>
           <input type="number" id="q2" value="30" step="0.1"><br><br>
         <!--fins aqui els camps d'entrada de dades de l'usuari per fer el problema-->
-        <button onclick="calculatePosition()">Calcula la posició :</button>
+        <button onclick="calculatePosition()">Calcula la posició</button>
         <!--tots els imputs són com caixes blanques de caixes d'informació-->
         <!--calcula la posició, té forma de botó i quan el cliquem  s'executa una funció
         Javascript anomeada calculatedPosition() que té els parentesis buits perque no depèn de cap parametre o argument,
@@ -154,9 +154,8 @@ canvas{
     aquesta classe i si escricc . seguit del nom de la id seleccionare la id. En CSS  s'ha d'escriure sempre {propietat1:valor1; propietat2:valor2}
     i davant del primer  claudator he d'escriure .nomdelaid o #nomdelaclasse-->
     <script>
-        let x1;
         function calculatePosition() {
-            //agafar les dades introduïdes per l'usuari
+            //Agafar les dades introduïdes per l'usuari
         let a1 = parseFloat(document.getElementById('a1').value); //logitud del primer braç
         let a2 = parseFloat(document.getElementById('a2').value); //longitud del segon braç
         let q1_deg = parseFloat(document.getElementById('q1').value); //angle en graus del primer braç
@@ -169,7 +168,7 @@ canvas{
             En aquest tros de codi  de la linea 131 a la 134 hem aconseguit guardar les 4 dades geometriques del nostre robot per fer calculs de la seva 
             posició en funció de les 4 dades introduïdes per l'usuari */
 
-        //convertir graus a radians per als calculs trigonometrics
+        //Convertir graus a radians per als calculs trigonometrics
            let q1 = q1_deg * Math.PI / 180;
            let q2 = q2_deg * Math.PI / 180;
         //aixó és lo mateix que 2PI/360
@@ -184,25 +183,25 @@ canvas{
         per avisar que comença en MathJax i té unes normes com que la _ indica subínde, si poso una \\ davant de sinus o cosinus es veu escrit com a formula */
 
         //Substituir les variabes de les  equacions
-        
             output += "<div class='equation'>Substituint els valors</div>";
             output += `<div class='equation'>\\[ x = ${a1} \\cos(${q1_deg}°) + ${a2} \\cos(${q1_deg}° + ${q2_deg}°) \\]</div>`;
             output += `<div class='equation'>\\[ y = ${a1} \\sin(${q1_deg}°) + ${a2} \\sin(${q1_deg}° + ${q2_deg}°) \\]</div>`;
         //Càlculs numèrics 
-            let x1 =a1 * Math.cos(q1);//Posició en X del primer braç
-            let x2 =a2*Math.cos(q1+q2);//Posició en X del segon braç
-            let y1 =a1*Math.sin(q1);//Posició en y del primer braç
-            let y2 =a2*Math.sin(q1+q2);//Posició en Y del segon braç
-            output += "<div class='equation'>\\[ x_1 = a_1 \\cos(q_1) = ${a1} \\times \\cos(${q1_deg}&deg;) = ${x1.toFixed(2)}\\] </div>";
+            let x1 = a1 * Math.cos(q1);//Posició en X del primer braç
+            let x2 = a2 * Math.cos(q1 + q2);//Posició en X del segon braç
+            let y1 = a1 * Math.sin(q1);//Posició en y del primer braç
+            let y2 = a2 * Math.sin(q1 + q2);//Posició en Y del segon braç
+            output += "<div class='equation'>Desglossant els càlculs:</div>";
+            output += `<div class='equation'>\\[ x_1 = a_1 \\cos(q_1) = ${a1} \\times \\cos(${q1_deg}&deg;) = ${x1.toFixed(2)}\\] </div>`;
             output += `<div class='equation'>\\[ x_2 = a_2 \\cos(q_1+q_2) = ${a2} \\times \\cos(${q1_deg}&deg;) + ${q2_deg}&deg;) = ${x2.toFixed(2)}\\] </div>`;
             output += `<div class='equation'>\\[ y_1 = a_1 \\sin(q_1) = ${a1} \\times \\cos(${q1_deg}&deg;) = ${y1.toFixed(2)}\\] </div>`;
             output += `<div class='equation'>\\[ y_2 = a_2 \\sin(q_1+q_2) = ${a2} \\times \\cos(${q1_deg}&deg;) + (${q2_deg}&deg;) = ${y2.toFixed(2)}\\] </div>`;
         //Càlcul de les coordenades finals (x,y) de la mà del robot
-            let x = x1 +x2;
-            let y = y1 +y2;
+            let x = x1 + x2;
+            let y = y1 + y2;
             output += "<div class='equation'>Calculant els resultats numèrics totals:</div>";
-            output += `<div class='equation'> \\[x = {$(x.toFixed(2))} \\] </div>`;
-            output += `<div class='equation'> \\[y = {$(x.toFixed(2))} \\] </div>`;
+            output += `<div class='equation'>\\[x = {$(x.toFixed(2))} \\] </div>`;
+            output += `<div class='equation'>\\[y = {$(y.toFixed(2))} \\] </div>`;
         /* .toFixed(2) és un metode d'arrodoniment que apliquem amb la sintaxi del punt a la lletra x i a la lletra y que corresponen a la posició
         final del robot. Let x = x1 +  x2; emmagatzema el valor de la posició x final en x i el $ selecciona el valor x i el posa 2 decimals
         arrodonits amb .toFixed i els \\[ indiquen que estem escrivint  un codi MathJax3 que és un derivat de Latex per escriure  formules matemàtiques
@@ -211,7 +210,7 @@ canvas{
         no són "id" perquè si fosin "id" hauriem de ser 1, i són classes*/
         //Mostrar el resultat
         document.getElementById('output').innerHTML = output;
-        MathJax.typeset(); //REnderitzar les fórmules matemàtiques amb MathJax
+        MathJax.typeset(); //Renderitzar les fórmules matemàtiques amb MathJax
         }
         //Dibuixar gràficament el robot amb els dos braços
         let canvas = document.getElementById("robotCanvas");
@@ -224,7 +223,7 @@ canvas{
         es a dir hi ha un divisor buit HTML anomenat output on surten totes les formules i un divisor buit HTML anomenat robotCanvas on sortira
         el dibuix del robot*/
         let ctx = canvas.getContext("2d");//El dibuix ha de ser 2D i no 3D
-        ctx.clearRect(0,0,canvas.width,canvas.heigth);
+        ctx.clearRect(0,0,canvas.width,canvas.height);
         //Netejem el canvas abans de dibuixar
         //ctx l'hem anomenat aixi perquè significa context de canvas en 2D
         /*Posem el punt davant de .clearRect perquè és un mètode que s'aplica al context i té 4 arguments o parametres. Els 2 primers és
@@ -235,15 +234,15 @@ canvas{
         inferior dreta.*/
         //Definim el centre del canvas i l'escala
         let centerX = canvas.width / 2;//Punt mitjà de X
-        let centerY = canvas.heigth / 2;//Punt mitjà de Y
+        let centerY = canvas.height / 2;//Punt mitjà de Y
         // si el canvas fa 400, 400 centerX i centerY serien 200.
         let scale = 80;//Escala per dibuixar les distancies
         /*La escala del dibuix vol dir que si poso una unitat física en la entrada del text corresponent a a1 o a2 equival a 80 píxels en el canvas. Per exempple
         si el robot té un braç de un metre serien 80 pixels.*/
-        let x1_screen = centerX + x1*scale;
-        let y1_screen = centerY + y1*scale;
-        let x2_screen = centerX + x2*scale;
-        let y2_screen = centerY + y2*scale;
+        let x1_screen = centerX + x1 * scale;
+        let y1_screen = centerY - y1 * scale;
+        let x2_screen = centerX + x2 * scale;
+        let y2_screen = centerY - y2 * scale;
         /* x1_screen, y1_screen, x2_screen, y2_screen són les coordenades del robot que comencem pel centre perquè el braç del robot es pot moure 
         en qualsevol direcció i el que faig és aplicar l'escala a les distàncies dels braços introduïdes*/
         /* Aqui lo que farem és dibuiar el primer braç */
