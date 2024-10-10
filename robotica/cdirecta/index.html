@@ -122,7 +122,7 @@ canvas{
         més exemples aqui: https://www.w3schools.com/html/html_form_input_types.asp-->
         <!--id significa identificador i és  com un DNI, no es pot repetir en la mateixa pàginna i ens ajuda  a manipular-lo 
         en Javascript getElementById, value significa valorper defecte que dortirà directament, step és 
-        la variabilitat que jo puc escriure, no puc escriure 4,32, si vulgues escriiure 4,32 amb 2  decimals qué hauria d'escriure?
+        la variabilitat que jo puc escriure, no puc escriure 4,32, si vulgues escriure 4,32 amb 2  decimals qué hauria d'escriure?
         hauria d'escriure step="0.01"-->
         <!--br significa "break" que deixa una linea en blanc darrera, com hi ha 2 br hi hauran 2 lineas en blanc-->
          <label for="a2"> Longitud del primer braç(a2)..</label>
@@ -183,23 +183,23 @@ canvas{
         //Substituir les variabes de les  equacions
         
             output += "<div class='equation'>Substituint els valors</div>";
-            output += "<div class='equation'>\\[ x = ${a1} \\cos(${q1_deg}°) + ${a2} \\cos(${q1_deg}° + ${q2_deg}°) \\]</div>";
-            output += "<div class='equation'>\\[ y = ${a1} \\sin(${q1_deg}°) + ${a2} \\sin(${q1_deg}° + ${q2_deg}°) \\]</div>";
+            output += `<div class='equation'>\\[ x = ${a1} \\cos(${q1_deg}°) + ${a2} \\cos(${q1_deg}° + ${q2_deg}°) \\]</div>`;
+            output += `<div class='equation'>\\[ y = ${a1} \\sin(${q1_deg}°) + ${a2} \\sin(${q1_deg}° + ${q2_deg}°) \\]</div>`;
         //Càlculs numèrics 
             let x1 =a1*Math.cos(q1);//Posició en X del primer braç
             let x2 =a2*Math.cos(q1+q2);//Posició en X del segon braç
             let y1 =a1*Math.sin(q1);//Posició en y del primer braç
             let y2 =a2*Math.sin(q1+q2);//Posició en Y del segon braç
             output += "<div class='equation'>\\[ x_1 = a_1 \\cos(q_1) = ${a1} \\times \\cos(${q1_deg}&deg;) = ${x1.toFixed(2)}\\] </div>";
-            output += "<div class='equation'>\\[ x_2 = a_2 \\cos(q_1+q_2) = ${a2} \\times \\cos(${q1_deg}&deg;) + ${q2_deg}&deg;) = ${x2.toFixed(2)}\\] </div>";
-            output += "<div class='equation'>\\[ y_1 = a_1 \\sin(q_1) = ${a1} \\times \\cos(${q1_deg}&deg;) = ${y1.toFixed(2)}\\] </div>";
-            output += "<div class='equation'>\\[ y_2 = a_2 \\sin(q_1+q_2) = ${a2} \\times \\cos(${q1_deg}&deg;) + (${q2_deg}&deg;) = ${y2.toFixed(2)}\\] </div>";
+            output += `<div class='equation'>\\[ x_2 = a_2 \\cos(q_1+q_2) = ${a2} \\times \\cos(${q1_deg}&deg;) + ${q2_deg}&deg;) = ${x2.toFixed(2)}\\] </div>`;
+            output += `<div class='equation'>\\[ y_1 = a_1 \\sin(q_1) = ${a1} \\times \\cos(${q1_deg}&deg;) = ${y1.toFixed(2)}\\] </div>`;
+            output += `<div class='equation'>\\[ y_2 = a_2 \\sin(q_1+q_2) = ${a2} \\times \\cos(${q1_deg}&deg;) + (${q2_deg}&deg;) = ${y2.toFixed(2)}\\] </div>`;
         //Càlcul de les coordenades finals (x,y) de la mà del robot
             let x = x1 +x2;
             let y = y1 +y2;
             output += "<div class='equation'>Calculant els resultats numèrics totals:</div>";
-            output += "<div class='equation'> \\[x = {$(x.toFixed(2))} \\] </div>";
-            output += "<div class='equation'> \\[y = {$(x.toFixed(2))} \\] </div>";
+            output += `<div class='equation'> \\[x = {$(x.toFixed(2))} \\] </div>`;
+            output += `<div class='equation'> \\[y = {$(x.toFixed(2))} \\] </div>`;
         /* .toFixed(2) és un metode d'arrodoniment que apliquem amb la sintaxi del punt a la lletra x i a la lletra y que corresponen a la posició
         final del robot. Let x = x1 +  x2; emmagatzema el valor de la posició x final en x i el $ selecciona el valor x i el posa 2 decimals
         arrodonits amb .toFixed i els \\[ indiquen que estem escrivint  un codi MathJax3 que és un derivat de Latex per escriure  formules matemàtiques
