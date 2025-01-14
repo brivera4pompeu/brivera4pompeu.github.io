@@ -95,6 +95,8 @@ d'aconseguir una sortida analògica a partir de diverses sortides digitals molt 
 <p>Suposem que Arduino Uno Rev3 o Rev4 podem donar 5 volts com a màxim. Quina seria la resolució en milivolts de cada Arduino?</p>
 <p> 5 volts dividit entre 256 dona 0.01953125 volts = 19.53125 milivolts per arduino Rev3</p>
 <p> 5 volts dividit entre 2048 dona 0.00244140625 volts = 2.44140625 milivolts per arduino Rev4</p>
-
+<p>Els milivolts anteriors són la resolució que aconseguim. Imaginem que volem regular la intensitat d'un LED amb un Arduino Uno Rev3 aconseguim
+menys fluid i amb graons més grans, és a dir canvis més bruscs perquè 256 canvis són menys que 2048 volts. A continuació veurem una imatge que representa
+com combinant moltes senyals digitals ràpidament sembla que generem un senyal analògi i això és la base del PWM</p>
 </body>
 </html>
