@@ -42,6 +42,11 @@
             margin-right: 10px; /* Marges laterals ajustats */
             margin-top: 20px; /* Afegeix espai superior entre el contingut i la barra de menú */
         }
+      table{ 
+        width:50%; //Ocupa el 50% de l'amplada de la pàgina
+        border-collapse: collapse;// Evita que apareixin dobles linies a les cel·les 
+        margin: 20px auto; //Marge de 20px a la part superior i centra la taulq
+      }
     </style>
 </head>
 <body>
@@ -98,7 +103,7 @@ d'aconseguir una sortida analògica a partir de diverses sortides digitals molt 
 <p>Els milivolts anteriors són la resolució que aconseguim. Imaginem que volem regular la intensitat d'un LED amb un Arduino Uno Rev3 aconseguim
 menys fluid i amb graons més grans, és a dir canvis més bruscs perquè 256 canvis són menys que 2048 volts. A continuació veurem una imatge que representa
 com combinant moltes senyals digitals ràpidament sembla que generem un senyal analògi i això és la base del PWM.</p>
-<img src="pmw.png" widht="600" height="450">
+<img src="pmw.PNG" widht="600" height="450">
 <p>Quan major és l'amplada del pols vol dir que major és el temps que la sortida digital està en voltatge alt,
    per exemple 5V i menys temps està a 0V, i per tant el promig  de tots els polsos és més alt. En canvi si 
    per exemple si cada pols és més estret a 5V vol dir que estarà més temps a 0V, i per tant el promig  de
