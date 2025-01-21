@@ -218,9 +218,10 @@ combinaions de 0 i 1, és a dir 4096 nivells diferents que numèricament van des
         instrucció per confirmar que ja ha acabat. 
           }
           void loop(){ //És una funció que repeteix sense parar fins que desconecto físicament o poso un codi per aturar-ho.
-          valorADC=analogRead(AO); //La variable que hem creat abans que era 0 inicialment ara cambiarà perquè la instrucció analogRead el que fa és llegir valors
-        entre 0 i 1023 si és un Arduino uno.
-          valorADC=analogRead(34); // a variable de valor 0 ara serà un valor entre 0 i 4095 perquè 34 és el número de PIN d'un Arduino
+          valorADC=analogRead(AO); //La variable que hem creat abans que era 0 inicialment ara canviarà perquè la instucció
+          analogRead el que fa és llegir valors entre 0 i 1023 si és un Arduino uno, A0 és una de les 6 entrades analògiques 
+          d'Arduino uno.
+          valorADC=analogRead(34); // La variable de valor 0 ara serà un valor entre 0 i 4095 perquè 34 és el numero de PIN d'un ESP32S3
           Serial.println(valor ADC); //
           delay(500);} 
    </code>
