@@ -242,10 +242,73 @@ combinaions de 0 i 1, és a dir 4096 nivells diferents que numèricament van des
         <p>En el codi tenenim un pin 34 que es un pin intern que no veu l'usuari perque esta dins de la placa base fent la funció SPIQ 
         segons el datasheet el GPIO34 corespon al pin fisic 39 per tant sempre hem de mirar el pinout oficial.</p>
     <h3>COM FUNCIONEN LES ENTRADES ANALÒGIQUES DELS MICROCONTROLADORS</h3>
-    <p>Els pins A0 fins A5 els puc conectar una sèrie d'elements</p>
+   <p> Els pins A0 fins A5 són entrades analógiques i allà podem connectar una série d'elements: </p>
     <ul>
-        <li>Sensor de llum LDR <i>(Ligth Depender Resistor)</i>: Fotodiodes, cel·lules solars... </li>
-        <li>Sensor de temperatura: </li>
+      <li> Sensor de llum: LDR <i>(light dependent resistor)</i>: Fotodiodes, Cél·lules solars</li>
+      <li> Sensors de temperatura: LM35 (té una sortida lineal, 10 milivolts és un grau centrigrads i un rang -55 +150 semblant a TMP36, té menys rang i és menys precís), DHT11 O DHT22, mesuren temperatura i humitat i el 22 és més precía que el 11, DS18820 té protocol one-wire</li>
     </ul>
+  <h4> EXEMPLE AMB EL SENSOR DE TEMPERATURA LM35</h4>
+   <pre>
+     <code>
+ const int sensorPin= A0;
+
+void setup()
+{
+  Serial.begin(9600);
+}
+
+void loop()
+{
+  int value = analogRead(sensorPin);
+  float millivolts = (value / 1023.0) * 5000;
+  float celsius = millivolts / 10; 
+  Serial.print(celsius);
+  Serial.println(" C");
+  delay(1000);
+}       
+     </code>
+   </pre>
+<p>El codi de més amunt funcionaria amb un sensor de temperatura LM35, però es podria adaptar per qualsevol sensor. Per què? Si soc un Arduino,
+els pins A0 - A5 només soc capaç de fer una cosa, llegir la senyal del sensor entre 0 i 1023. Mentresque en els pins PWM seria capaç d'escriure
+de 0 - 255</p>
+<p> <b>const int sensorPin = A0</b>; significa que el valor és cons o constant, i que no vaciarà en tot el codi, int que és un variable que és de tipus
+integer o número enter, <b>sensonPin</b> és el nom que trio per identificar el pin anomenat A0 i podia haver triat  qualsevol altre nom, com: SensorT,
+sensorTemperatura, sensorLM35... Per tant la instrucció sencera que fa? Estem donant un nom al pin A0 per identificar-lo i que sigui una constant a tot el codi
+que no pot variar perquè si varia, varia tot el número de pin</p>
+   <p> void setup()
+{
+  Serial.begin(9600);
+}
+       Tots els codis sempre tenen les mateixes parts, al principi es posarien les biblioteques necessaries, seguides de les variables que necessiten
+       (en aquest cas SensorPin) i a continuació va el bloc  o funció de onfiguració anomenada <b>setup</b>, el setup s'executa una sola vegada i <b>Serial.begin(9600)</b>;
+       el que fa és aplicar el mètode begin amb la sintaxi del punt (dot syntax) amb un argument o paràmetre que està entre parèntesis. Serial vol dir comunicació
+       en sèrie a través d'un cable USB, 9600 és la velocitat en bits per segon a través del cable USB. En un ESP32S3 es comunica una velocitat més alta, en aquest cas 
+       115200 bits per segon, i aquesta velocitat no només té que estar en el codi, sinó que ha de coincidir en el IDE o entorn de programació d'Arduino, concretament a la consola de sortida
+       de comunicació sèrie. Si no ho faig poden sortir caràcters extranys quan premomel botó superior dret de comunicació sèrie. El punt i coma final és
+       molt important perquè indica que ha acabat la instrucció.>/p> 
+    <p>Per finalitzar hi ha el codi principal o loop que es repeteix sense parar:</p>
+    <p>int value = analogRead(sensorPin); int és integer i només agafa números enters, value és el nom que vull posar per emmagazemar tots els valors que 
+    agafa l'Arduino. I com els emmagatzema? Amb la instrucció analogRead que llegeix de 0 a 1023 i un llegit, el sensor pin (el paràmetre) i els guarda dins de value</p>
+    <p>float millivolts = (value / 1023.0) * 5000; float sinifica floating point number, o número decimal en anglés, millivolts és el nom de la variable on emmagatzemem
+    els millivolts reals que està generant el sensor de temperatura. Per què genera en millivolts? Perquè l'Arduino Uno funciona a 5V o a 5000mV, que passa si divideixo
+    el valor entre 1023, que tinc que valor en tant per 1, i si a aquest valor el multipliquem per 5000, em donen 1023 valors diferents entre 0 i 5000</p>
+    <p>Posem diversos exemples:</p>
+    <ul>
+        <li>Si value=0:(0/1023)*5000 = 0 millivolts</li>
+        <li>Si value=10:(10/1023)*5000 = 49 millivolts</li>
+        <li>Si value=100:(100/1023)*5000 = 488 millivolts</li>
+        <li>Si value=500:(500/1023)*5000 = 2443 millivolts</li>
+    </ul> 
+    <p>Això passaria en tots els sensors del món. Pero com seria si fos un ESP32S3? Seria 3.3V i 4095, per tant aquests exemples serien:</p>
+    <ul>
+        <li>Si value=0:(0/4095)*3300 = 0 millivolts</li>
+        <li>Si value=10:(10/4095)*3300 = 8 millivolts</li>
+        <li>Si value=100:(100/4095)*3300 = 80 millivolts</li>
+        <li>Si value=500:(500/4095)*3300 = 402 millivolts</li>
+    </ul>
+    <p>Amb això aconseguiriem millor resolució o presició, és a dir, el termometre o sensor agafa més valors diferents (seria més precis). En aquest cas value/4095, sempre
+    serà un número entre 0 i 1, ja que value sempre va entre 0 i 4095, i si el multiplico per 3300, tindre un número de 0 a 3300 millivolts.</p>
+    <p><b>float celsius = millivolts / 10;</b> float demana un número decimal</p>
 </body>
 </html>
+
