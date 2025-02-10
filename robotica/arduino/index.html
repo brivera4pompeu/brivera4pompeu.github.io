@@ -321,11 +321,15 @@ que no pot variar perquè si varia, varia tot el número de pin</p>
     llenguatde de programació actualment. Si utilitzo processing i la biblioteca Arduino l'avantatge que tinc és
     que puc utilitzar totes les biblioteques de visió per ordinador, d'intel·ligencia artifial, de l'ordinador
     i fer aplicacions que només amb Arduino serien imposibles.</p>
-    <img src="lm35.pnng">
+    <img src="lm35.png">
     <p>La imatge anterior procedex de la fulla de característiques de LM35, i es veu que té una resposta lineal del voltatge i la temepreatura, de forma que a 2.9V
     ens donaria -55 graus i a 4.15V ens donaria 155 graus. Com fariem un codi de mapeig per això?</p>
-    float temp = map (value,0,1023,2900,4150)
-    float celsius = map (temp,2900,4150,-55,155) 
+    <b>float temp = map (value,0,1023,2900,4150);</b>
+    <p>value és un valor que agafa amb la intrucció analogRead i va entre 0-1023 perquè és un conversor d'analògic a digital de 10 bits,
+    que seria 2<sup>10</sup>, el transforma en un altre entre 2900-4150 millivolts.</p>
+    <b>float celsius = map (temp,2900,4150,-55,155);</b>
+    <p>La variable "temp" no conté temperatura sinó millivolts i els convertim d'aquesta manera perquè la fulla de característiques de LM35
+    diu que hi ha una resposta lineal vista en el gràfic de més amunt entre els millivolts mesurats i la temperatura en celsius.</p>
 </body>
 </html>
 
