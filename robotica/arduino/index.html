@@ -330,6 +330,21 @@ que no pot variar perquè si varia, varia tot el número de pin</p>
     <b>float celsius = map (temp,2900,4150,-55,155);</b>
     <p>La variable "temp" no conté temperatura sinó millivolts i els convertim d'aquesta manera perquè la fulla de característiques de LM35
     diu que hi ha una resposta lineal vista en el gràfic de més amunt entre els millivolts mesurats i la temperatura en celsius.</p>
+    <p>Què passaria si utilitzo ESP32S3 i no Arduino, respecte a la sura de la temperatura?</p>
+    <p>El codi canviara de la següent manera d'aquest codi: "float temp = map (value,0,1023,2900,4150);" a "float temp = map (value,0,4095,2900,4150);"
+    perquè hi ha 12 bits, que és 2<sup>12</sup>, que dona 4096 i s'hauria de connectar a 5 volts, ja que, es pot connectar també a 3,3 volts, però
+    no es llegiria correctament.</p>
+    <p>Quina mesura donaria en un o altre controlador?</p>
+    <p>En ESP32S3 tenim 4096 nivells diferents, i tenim 1250 millivolts disponibles (4150-2900)</p>
+    <p>Quina és la resolució que tinc per cada nivell?</p>
+    <ul>
+        <li>1250/4096, que dona 0.30517578125</li>
+        <li>1250/2900, que dona 0.43103448275</li>
+    </ul>
+    <p>En el primer exemple, vol dir que cada vegada que augmenta un número de nivell augmenta 0.305 millivolts, en el segon igualpero con 0.431 millivolts</p>
+    <p>0.305 millivolts quants graus seria?</p>
+    <p>Serien 205 graus de diferència de temperatura, per tant, la resolució seria més baixa en el cas de 1024 nivells, que en el cas de 4096 nivells, no importa el valor 
+    intermig.</p>
 </body>
 </html>
 
