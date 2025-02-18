@@ -73,7 +73,6 @@
     <img src="logo.png" alt="Logo" width="50" class="logo">
     <span class="brand-text">Configuració</span>
 </a>
-
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -93,6 +92,20 @@
 </nav>
 
 <p>This is the new board from Espressif, ESP32-S3 DevKit. ESP32-S3 is a dual-core XTensa LX7 MCU, capable of running at 240 MHz. Apart from its 512 KB of internal SRAM, it also comes with integrated 2.4 GHz, 802.11 b/g/n Wi-Fi and Bluetooth 5 (LE) connectivity that provides long-range support. It has 45 programmable GPIOs and supports a rich set of peripherals.</p>
+	<p>La ESP32S3 té un processador de doble nucli de la marca extersa MX7 MCU que processa dades a 240 MHz. Això
+	pot supossar aproximadament 240 millions de d'operacions amb decimals o coma flotant o FLOPS per segon. Aquesta dada
+	es crítica perquè es indica la potència de càlcul dels microcotroladors i dels processadors que controlen als robots. Fem una comparativa: 
+	Un Arduino Uno té una capacitat de processament de 16 MHz, respecte al ESP32S3 és 15 vegades més lent. Respberry Pi 4 té 
+	1.5 GHz, que és 6.25 més ràpid que ESP32S3. <i>Tianhe-3 i El Captian</i> són els superordinadors més potents de 2025 i han arribat
+	a hexaflops, és a di, 1 trillion d'operacions matemàtiques per segon. És important decidir quin microcontrolador, ordinador o
+	superordinador és adequat per cada aplicació, perquè no podré fer aplicacions que requereixin molt càlcul en un microcontrolador petit.</p>
+	<p>La memoria interna del ESP32S3 també és un factor limitant, en aquest cas 512 kB, associada al processador Extensa. Arduino Uno
+	té una memòria RAM més baixa, de 2 kB, que és la que ve del seu processador AVR. <b>RAM</b> significa <i>Random Acces Memory</i>, que és
+	la memoria interna d'accès ràpid en la qual s'executen els programes. ESP32S3 té 256 vegades més memòria, i un ordinador com el meu té 8
+	GB, que són més de 15000 vegades més que el ESP32S3.</p>
+	<p>La memoria ROM és <i>Read Only Memory</i> o el disc dur, que és la capacitat total de memòria del microcontrolador o de l'ordinador.
+	L'Arduino Uno té 32 kB de memòria ROM, l'ESP32S3 té 384 kB
+		
 <p>You can work with different software as you can read under Microcontrollers>Software for microcontollers in this web as for example using the <a href="https://docs.platformio.org/en/latest/boards/espressif32/esp32-s3-devkitc-1.html" target="_blank">Ukrainian software PlatformIO for this board.</a></p>
 <p><a href="http://blocs.xtec.cat/tecno/files/2022/07/ESP32-S3-Series-Kit-Component-Overview.jpeg"><img class="alignnone size-large wp-image-2211" src="http://blocs.xtec.cat/tecno/files/2022/07/ESP32-S3-Series-Kit-Component-Overview-1024x546.jpeg" alt="" width="474" height="253" srcset="https://blocs.xtec.cat/tecno/files/2022/07/ESP32-S3-Series-Kit-Component-Overview-1024x546.jpeg 1024w, https://blocs.xtec.cat/tecno/files/2022/07/ESP32-S3-Series-Kit-Component-Overview-300x160.jpeg 300w, https://blocs.xtec.cat/tecno/files/2022/07/ESP32-S3-Series-Kit-Component-Overview-768x409.jpeg 768w, https://blocs.xtec.cat/tecno/files/2022/07/ESP32-S3-Series-Kit-Component-Overview.jpeg 1075w" sizes="(max-width: 474px) 100vw, 474px" /></a></p>
 <p><a href="http://blocs.xtec.cat/tecno/files/2022/07/ESP32-S3-DevKitC-1-Pin-Layout.png"><img class="alignnone size-large wp-image-2212" src="http://blocs.xtec.cat/tecno/files/2022/07/ESP32-S3-DevKitC-1-Pin-Layout-1024x459.png" alt="" width="474" height="212" srcset="https://blocs.xtec.cat/tecno/files/2022/07/ESP32-S3-DevKitC-1-Pin-Layout-1024x459.png 1024w, https://blocs.xtec.cat/tecno/files/2022/07/ESP32-S3-DevKitC-1-Pin-Layout-300x135.png 300w, https://blocs.xtec.cat/tecno/files/2022/07/ESP32-S3-DevKitC-1-Pin-Layout-768x344.png 768w, https://blocs.xtec.cat/tecno/files/2022/07/ESP32-S3-DevKitC-1-Pin-Layout.png 1113w" sizes="(max-width: 474px) 100vw, 474px" /></a></p>
