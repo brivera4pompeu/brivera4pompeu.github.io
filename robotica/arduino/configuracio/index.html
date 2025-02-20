@@ -104,8 +104,25 @@
 	la memoria interna d'accès ràpid en la qual s'executen els programes. ESP32S3 té 256 vegades més memòria, i un ordinador com el meu té 8
 	GB, que són més de 15000 vegades més que el ESP32S3.</p>
 	<p>La memoria ROM és <i>Read Only Memory</i> o el disc dur, que és la capacitat total de memòria del microcontrolador o de l'ordinador.
-	L'Arduino Uno té 32 kB de memòria ROM, l'ESP32S3 té 384 kB
-		
+	L'Arduino Uno té 32 kB de memòria ROM, l'ESP32S3 té 384 kB de memòria ROM i el meu ordinador té 119 GB de meòria, que són un gran 
+        número de vegades diferents.</p>
+	<h1>Entrades GPIO</h1>
+	<p>GPIO significa <i>General Purpose Input/Output</i>, és a dir, entrades i sortides de propòsit general. Aquests pns permenten
+	ser utilitzats com entrades analògiques, entrades digitals, sortides analògiques i sortides digitals, i a vegades també com a rellotges
+	o parts de protocols de comunicació. Les GPIO estan normalment en microcontroladors avançats o moders, com ESP32S3 i també en microodenadors-microcontroladors
+	com Raspberry Pi. Arduino Uno Rev 3 no té GPIOs, però es pot utilitzar com a GPIOs les entrades analògiques de A0 a A5 i també es poden
+	piratejar/modificar altres pins.</p>
+	<h2>Protocols de comunicació</h2>
+	<p>Diferents maneres que té una placa (Arduino Uno o ESP32S3) de connectar-se a qualsevol altre dispositiu, com un sensor, el nostre 
+	portatil, una pantalla, una pantalla LCD, OLED, una targeta SD, etc.</p>
+	<h3>SPI</h3>
+	<p>SPI significa <i>Serial Periferal Interface</i> i permet la comunicació síncrona entre el microcontrolar i altres dispositius electrònics,
+	com: Sensor, targetes SD, pantalles TFT, etc. 
+	<h3>Comunicació síncrona</h3>
+	Ccoordinació entre el receptor i transmisor per enviar dades, això es fa per una transmisió o línea de rellotge que es diu SCK o CLK, 
+	cadascuna serveix pere  que a cada puls de rellotge indica que s'ha de llegir o escriure un bit, i el transmisor i el receptores mouen al ritme del relloge que
+	fa possible entre 	
+	
 <p>You can work with different software as you can read under Microcontrollers>Software for microcontollers in this web as for example using the <a href="https://docs.platformio.org/en/latest/boards/espressif32/esp32-s3-devkitc-1.html" target="_blank">Ukrainian software PlatformIO for this board.</a></p>
 <p><a href="http://blocs.xtec.cat/tecno/files/2022/07/ESP32-S3-Series-Kit-Component-Overview.jpeg"><img class="alignnone size-large wp-image-2211" src="http://blocs.xtec.cat/tecno/files/2022/07/ESP32-S3-Series-Kit-Component-Overview-1024x546.jpeg" alt="" width="474" height="253" srcset="https://blocs.xtec.cat/tecno/files/2022/07/ESP32-S3-Series-Kit-Component-Overview-1024x546.jpeg 1024w, https://blocs.xtec.cat/tecno/files/2022/07/ESP32-S3-Series-Kit-Component-Overview-300x160.jpeg 300w, https://blocs.xtec.cat/tecno/files/2022/07/ESP32-S3-Series-Kit-Component-Overview-768x409.jpeg 768w, https://blocs.xtec.cat/tecno/files/2022/07/ESP32-S3-Series-Kit-Component-Overview.jpeg 1075w" sizes="(max-width: 474px) 100vw, 474px" /></a></p>
 <p><a href="http://blocs.xtec.cat/tecno/files/2022/07/ESP32-S3-DevKitC-1-Pin-Layout.png"><img class="alignnone size-large wp-image-2212" src="http://blocs.xtec.cat/tecno/files/2022/07/ESP32-S3-DevKitC-1-Pin-Layout-1024x459.png" alt="" width="474" height="212" srcset="https://blocs.xtec.cat/tecno/files/2022/07/ESP32-S3-DevKitC-1-Pin-Layout-1024x459.png 1024w, https://blocs.xtec.cat/tecno/files/2022/07/ESP32-S3-DevKitC-1-Pin-Layout-300x135.png 300w, https://blocs.xtec.cat/tecno/files/2022/07/ESP32-S3-DevKitC-1-Pin-Layout-768x344.png 768w, https://blocs.xtec.cat/tecno/files/2022/07/ESP32-S3-DevKitC-1-Pin-Layout.png 1113w" sizes="(max-width: 474px) 100vw, 474px" /></a></p>
