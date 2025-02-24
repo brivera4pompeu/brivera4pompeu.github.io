@@ -112,16 +112,36 @@
 	o parts de protocols de comunicació. Les GPIO estan normalment en microcontroladors avançats o moders, com ESP32S3 i també en microodenadors-microcontroladors
 	com Raspberry Pi. Arduino Uno Rev 3 no té GPIOs, però es pot utilitzar com a GPIOs les entrades analògiques de A0 a A5 i també es poden
 	piratejar/modificar altres pins.</p>
-	<h2>Protocols de comunicació</h2>
-	<p>Diferents maneres que té una placa (Arduino Uno o ESP32S3) de connectar-se a qualsevol altre dispositiu, com un sensor, el nostre 
-	portatil, una pantalla, una pantalla LCD, OLED, una targeta SD, etc.</p>
-	<h3>SPI</h3>
-	<p>SPI significa <i>Serial Periferal Interface</i> i permet la comunicació síncrona entre el microcontrolar i altres dispositius electrònics,
-	com: Sensor, targetes SD, pantalles TFT, etc. 
-	<h3>Comunicació síncrona</h3>
-	Ccoordinació entre el receptor i transmisor per enviar dades, això es fa per una transmisió o línea de rellotge que es diu SCK o CLK, 
-	cadascuna serveix pere  que a cada puls de rellotge indica que s'ha de llegir o escriure un bit, i el transmisor i el receptores mouen al ritme del relloge que
-	fa possible entre 	
+	<h2> Protocols de comunicació</h2>
+        <p> Diferents maneres que té una placa (Arduinno Uno o ESP32S3) de connectarse en qualsevol altre dispositiu, com: un sensor, el nostre portatil, una pantalla LCD, OLED, un targeta SD, etc.</p>
+        <h3> Comunicació síncrona</h3>
+        Coordinació entre el receptor i transmisor per enviar dades, això es fa per una transmisió o línia de rellotge que
+        es diu SCK o CLK serveix per a que a cada puls de rellotge indica que s'ha de llegir o escriure un bit, i el transmisor 
+        i el receptor es mouen al mateix ritme del rellotge que fa possible entre el microcontrolador i altres dispositius 
+        electronics, com: sensor, targetes SD, pantalles TFT, etc.</p>
+        <p>Hi ha dos protocols principals síncrons: SPI i I2C </p>
+        <p> SPI significa Serial Periferal Interface i I2C significa Inter-Integrated Circuit</p>
+        <p> La comunicació / protocols síncrons és més ràpida i eficient en velocitats altes i és més precisa perquè els dispositius estan sincronitzats, però necessitem posar més cables per al rellotge i altres senyals.</p>
+<h3> Comunicació asíncrona</h3>
+<p> No hi ha cap rellotge compartit, el emisor i el transmisor funcionen de forma totalment independents </p>
+<p> Cada byte (conjunt de bits) o paquet de dades porta uns bits que es poden indentificar com a bits d'inici i bits de final (convinació de 0 i 1 que és sempre igual, i que ens indica que ha començar o acabat la transmissió) </p>
+<p> El transmisor i el receptor han d'acordar la velocitat de transmisió, e Arduino Uno Rev3 és 9600 bauds o bits per segon i en ESP32S3 és 115200 bauds </p>
+<p> Exemples de protocols asíncrons són UART i RS232 </p>
+<p> UART vol dor Universal Asynchronous Receiver-Transmiter, i RS232 és el protocol o port sèrie antic </p>
+      <h5> Avantatges </h5>
+      <ul>
+        <li>  Més senzill de cablejar</li>
+        <li> Ideal per distancies llargues (de cable)</li>
+        <li> Comunicacions simples</li>
+      </ul>
+      <h5> Inconvenients </h5>
+      <ul>
+        <li>  Menys eficient a velocitats altes</li>
+        <li> Risc de desincronització si no respecta la velocitat acordada</li>
+      </ul>
+      <h4> SPI </h4>
+      <p> Exemple de SPI amb Arduino Uno </p>
+      <p> El pin 11 és un MOSI que significa Master Out Slaif In, i el pin 12 és MISO Master In Slaif Out	
 	
 <p>You can work with different software as you can read under Microcontrollers>Software for microcontollers in this web as for example using the <a href="https://docs.platformio.org/en/latest/boards/espressif32/esp32-s3-devkitc-1.html" target="_blank">Ukrainian software PlatformIO for this board.</a></p>
 <p><a href="http://blocs.xtec.cat/tecno/files/2022/07/ESP32-S3-Series-Kit-Component-Overview.jpeg"><img class="alignnone size-large wp-image-2211" src="http://blocs.xtec.cat/tecno/files/2022/07/ESP32-S3-Series-Kit-Component-Overview-1024x546.jpeg" alt="" width="474" height="253" srcset="https://blocs.xtec.cat/tecno/files/2022/07/ESP32-S3-Series-Kit-Component-Overview-1024x546.jpeg 1024w, https://blocs.xtec.cat/tecno/files/2022/07/ESP32-S3-Series-Kit-Component-Overview-300x160.jpeg 300w, https://blocs.xtec.cat/tecno/files/2022/07/ESP32-S3-Series-Kit-Component-Overview-768x409.jpeg 768w, https://blocs.xtec.cat/tecno/files/2022/07/ESP32-S3-Series-Kit-Component-Overview.jpeg 1075w" sizes="(max-width: 474px) 100vw, 474px" /></a></p>
