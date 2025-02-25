@@ -168,14 +168,29 @@ electronics, com: sensor, targetes SD, pantalles TFT, etc.</p>
       Serial.begin(9600); //9600 són bauds o els bauds
       while(fitxer.available()){ //"Mentre que hagi dades per llegir dintre del fitxer"
       Serial.write(fitxer.read()); //El que faria és mostrar el contingut del fitxer. El mètode Read el que fa amb la sintaxi del punt aplicada al fitxer va llegint caràcter per caràcter i el mostra al monitor sèrie fins que no hi ha més caràcters per mostrar.
+      } // Aquesta clau tanca el bucle while
       fitxer.close(); //Sempre s'ha de tancar el fitxer quan no es necessita per evitar errors i alliberar memòria.
-      } //Aquesta clau tanca el bloc de configuració o setup.
+      } // Aquesta clau tanca la condició if
+      } // Aquesta clau tanca la funció setup
       void loop(){ //Aquesta part del codi és la que s'executaria tota l'estona de forma repetitiva. No posariem per exemple llegir un fitxer, ja que estaria llegint tota l'estona sense pausa.
       }
-      
-
   </code></pre>
-	
+	<h2>Exemple comunicació SPI entre MAX6675 i ESP32S3</h2>
+	<p>El MAX6675 és un sensor de temperatura amb molts circuits interns. En primer lloc té un termoparell de tipus K que permet mesurar temperatures molt amplies 
+		de -50 graus a 1000 graus amb una precisió de 0.25 graus i amb u preu de 5 euros. També té un convertidor analògic digital de 12 bits
+		i un circuit per adaptar a la comunicació SPI.</p>
+	    <p>Un termoparell de tipus K és una unió de 2 aliatges que genera un corrent electric proporcionada a la temperautra. Els 2 aliatges
+            més comuns: el Cromel consituit per crom i niquel i el alumel, constituit per alumini i niquel. L'efecte Seebeck és la tensió
+            electrica provocada per el canvi de temperatura que és molt petita la corrent del ordre de microvolts i que necesitem amplificar
+            amb un circuit amplificador amb l'ordre de minivolts i després amb un convertidor analogic digital de 12 bits, convertirlo en un númer
+            hexadecimal (els números hexadcimals comencen amb 0x, als binaris amb 0b i els octals de 0o), dintre del número pot haver el valor
+            per convertir en celsius </p>
+	<img src="MAX.png">
+        <p> A la imatge superior podem veure que MAX6675 està conectat a SP32S3 per alimentació electrica al pin de
+            3,3 volts i a un GND, també a de estar connectat a un MISO perque volem que funcioni com un sensor, es a dir, master input
+            que vol dir que al microcontrolador actua com a mestre, que rep eentrades o inputs i el sensor és un esclau que dona a output.
+            En ESP32 MISO és posa amb les sigles SO que vol dira serial out, vol dir que surt informació sèrie cap al mestre </p>
+        
 	
 <p>You can work with different software as you can read under Microcontrollers>Software for microcontollers in this web as for example using the <a href="https://docs.platformio.org/en/latest/boards/espressif32/esp32-s3-devkitc-1.html" target="_blank">Ukrainian software PlatformIO for this board.</a></p>
 <p><a href="http://blocs.xtec.cat/tecno/files/2022/07/ESP32-S3-Series-Kit-Component-Overview.jpeg"><img class="alignnone size-large wp-image-2211" src="http://blocs.xtec.cat/tecno/files/2022/07/ESP32-S3-Series-Kit-Component-Overview-1024x546.jpeg" alt="" width="474" height="253" srcset="https://blocs.xtec.cat/tecno/files/2022/07/ESP32-S3-Series-Kit-Component-Overview-1024x546.jpeg 1024w, https://blocs.xtec.cat/tecno/files/2022/07/ESP32-S3-Series-Kit-Component-Overview-300x160.jpeg 300w, https://blocs.xtec.cat/tecno/files/2022/07/ESP32-S3-Series-Kit-Component-Overview-768x409.jpeg 768w, https://blocs.xtec.cat/tecno/files/2022/07/ESP32-S3-Series-Kit-Component-Overview.jpeg 1075w" sizes="(max-width: 474px) 100vw, 474px" /></a></p>
