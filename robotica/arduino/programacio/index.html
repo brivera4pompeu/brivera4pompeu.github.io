@@ -96,6 +96,30 @@ void loop() {
  }
 }
 </code></pre>
+<pre><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button><code class="language-arduino">
+//Operacions matemàtiques (Útils per sensors o per problemes matemàtics)
+void setup() {
+  Serial.begin(9600);//Hem de connectar l'Arduino a la consola sèrie a 9600 bauds, que són 9600 símbols per segon
+    //I poden ser aproximadament 9600 bits per segon, però, en alguns casos, necessitem més d'un bit per un símbol
+  int a = 2;
+  int b = 2;
+  int c = a + b;//Llenguatge arduino accepta les operacions matemàtiques bàsiques
+  Serial.println(c); 
+}
+void loop() {}
+</code></pre>
+<pre><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button><code class="language-arduino">
+//Exemple de temperatura amb operacions matemàtiques
+
+void setup() {
+  Serial.begin(9600);
+  int degC = 20; //Representa que el sensor ja ha agafat 20 graus i els volem convertir a Fahrenheit
+  int degF;
+  degF = degC * 9 / 5 + 32;
+  Serial.println(degF); //Fes una impressió a la consola de l'ordinador en una línea println el valor de la variable fahrenheit.
+}
+void loop(){}
+</code></pre>
 </body>
 </html>
 
