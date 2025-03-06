@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ca">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,6 +34,7 @@
         }
     </script>
 </head>
+<body>
 <pre><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button><code class="language-arduino">
 //El meu primer codi: Blink
 void setup() { //Codi que s'executa una vegada i és la configuració.
@@ -345,7 +346,7 @@ void loop() {
 // numFlashes no esta definit com a variable global, és una variable local definida dins de la funció "flash"
 // i no te un valor predeterminat, només ha de complir que sigui un valor enter. El mateix per a la variable "d"
 void flash(int numFlashes, int d) {
-  for (int i = 0; i < numFlashes; i ++) {
+  for (int i = 0; i &lt; numFlashes; i ++) {
     digitalWrite(ledPin, HIGH);
     delay(d);
     digitalWrite(ledPin, LOW);
@@ -353,6 +354,13 @@ void flash(int numFlashes, int d) {
   }
 }
 </code></pre>
+<h1>Funcions en arduino</h1>
+      <p>Les funcions de arduino són semblants a les funcions que veiem a cinemàtica directa i inversa. En el cas de cinemàtica
+      robòtica utilitzavem funcions Javascript dintre d'un codi HTLM. Abans cada funció com per exemple, calculatePosition ()
+      era una funció sense arguments o parametres que estava identificada amb un bloc de codi anomenat function i s'executava
+      quan clicavem un botó. Dintre d'aquest bloc hi havien instruccions que permetien fer càlculs matemàtics.En el seguent codi 
+      d'arduino, tenim una funció flash amb dos parametres que eres números enters anomenat ledPin i de delayPeriod que identifiquen
+      el pin que està connectat i el temps que ha d'estar encès o apagat. </p>
 </body>
 </html>
 
