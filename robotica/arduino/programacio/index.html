@@ -615,10 +615,20 @@ char* numbers[] = {
 void setup() {
   pinMode(ledPin, OUTPUT);
   Serial.begin(9600);
+//En el setup o configuració del microcontrolador indiquem que el pin 13  que ara es diu "ledPin" sigui una sortida o "OUTPUT".
+//Indiquem a l'Arduino que es comuniqui amb l'ordinador a través del port serial o sèrie i connecti a una velocitat de 9600 bauds o simbols/segon que són aprox 9600 bits/sego.
 }
 
 void loop() {
-  char ch;
+//El loop és el codi principal, i el que el seu nom indica és que es repeteix sense parar en un "loop".
+//"char" significa que utilitzem una variable de tipus caràcter i 'anomenem "ch".
+//Serial.available significa si està disponible la comunicació sèrie o "serial monitor" que comunica el microcontrolador arduino amb el nostre ordinador o dispositiu
+//La comunicació entre arduino i l'ordinador és complexa:
+//Primer pas: l'ordinador envia dades al monitor sèrie a través de l'USB per un mecanisme que s'anomena "USB to serial"
+//Segon pas: la transformació anterior d'USB to Serial la fa un xip especial dintre d'Arduino
+//Tercer pas: les dades en format sèrie arriben a una part del microcontrolador amonenada "UART" que significa "Universal Asynchronous Receiver Transmiter" 
+//Quart pas: l'UART envia les dades que rep a una memòria temporal o buffer que pot emmagatzemar 128 bytes fins que s'elimina en el moment que es llegeix.
+    char ch;
   if (Serial.available() > 0) {
     ch = Serial.read();
     if (ch >= 'a' && ch <= 'z') {
