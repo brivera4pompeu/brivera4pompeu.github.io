@@ -789,7 +789,7 @@ l'apaguem perqué la variable switchOpen que estava a 1 es transforma a !switchO
 <p>El rebot podríem traduir-ho com rebot de contacte <i>(Contact bounce)</i>, és un problema comú a diferents dispositius com per exemple interruptors mecànics
 com per exemple el relé (Interruptor que canvia la posició d'una palanca interna mitjançant electromagnetisme), contactes de bateria... Tots aquests elements tenen en comú que estan fets per metalls elàstics,
 de forma de que quan jo apreto un interruptor mecànic,el metall que tanca el circuit, rebota diverses vegades sobre el contacte, provocant una inestabilitat a la senyal.</p>
-    #include <Bounce2.h>
+     #include <Bounce2.h>
         const int inputPin = 5;
         const int ledPin = 13;
         int ledValue = LOW;
@@ -799,15 +799,35 @@ de forma de que quan jo apreto un interruptor mecànic,el metall que tanca el ci
         pinMode(inputPin, INPUT_PULLUP);
         pinMode(ledPin, OUTPUT);
         bouncer.attach(inputPin);
-        // bouncer.interval(50); // interval in ms
+        bouncer.interval(50); // interval in ms
         }
 
         void loop() {
         if (bouncer.update() && bouncer.read() == LOW) {
           ledValue = ! ledValue;
           digitalWrite(ledPin, ledValue);
+        // El rebot de contacte (Contact Bounce) esta present en relés (Interruptors que canvia de estat depenent de l'electricitat), interruptors, contactes de bateria. Tots aquests
+        // estan fets per metalls elàstics, de forma que quan yo apreto un interruptor mecànic, el metall rebota diverses vegades sobre el contacte, provocant una inestabilitat al contacte.
         }
         }
+ </code>
+</pre>
+<p> Algunes sortides d'arduino i altres microcontroloadors son PWM </p>
+<pre><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button><code class="language-arduino">
+const int outputPin = 3;
+void setup() {
+  pinMode(outputPin, OUTPUT);
+  Serial.begin(9600);
+  Serial.println("Enter Volts 0 to 5");
+}
+
+void loop() {
+  if (Serial.available() > 0) {
+    float volts = Serial.parseFloat();
+    int pwmValue = volts * 255.0 / 5.0;
+    analogWrite(outputPin, pwmValue);
+  }
+}
 </code>
 </pre>
 <!-- Scripts necessaris -->
