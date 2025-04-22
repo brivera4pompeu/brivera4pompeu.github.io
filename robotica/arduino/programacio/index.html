@@ -840,8 +840,31 @@ del programa Arduino IDE: Enter volts 0-5.</p>
 El mètode parseFloat l'apliquem amb la sintaxi del punt al objecte Serial (Que es posa en majúscula, normalment seria una classe en majúscula) i agafa el valor de la consola sèrie</p>
 <p> La variable pwmValue és entera (int o "integer") i el que fa és convertir el valor de volts (0-5) a valors de 0-255, que és el numero de bits (2^8=256). Si fos un ESP32-S3 de 14 bits tal com indica el data
 sheet o fulla de caracteristiques de el ESP32-S3la linea de codi seria: "Serial.println("Enter Volts 0-3.3"), "int pwmValue = volts * 16384.0 / 3.3" </p>
-<p> El ESP32-S3 te l'avantatge de tenir més resolució, es a dir,  pot donar 16384 valors diferents entre 0-3,3 volts. Aixó pot que no es noti en un led, peró es nota en un motor, on l'ESP32 permet accedir a més velocitats diferents. 
-    Els motors poden arribar a 16 bits, que es 2^16 o 65536 valors diferents, depenent del tipus de motor, pot ser observat o no </p>
+<p> El ESP32-S3 té l'avantatge de tenir més resolució, és a dir,  pot donar 16384 valors diferents entre 0-3,3 volts. Això pot que no es noti en un led, però es nota en un motor, on l'ESP32 permet accedir a més velocitats diferents. 
+    Els motors poden arribar a 16 bits, que és 2^16 o 65536 valors diferents, depenent del tipus de motor, pot ser observat o no </p>
+</div>
+<pre><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button><code class="language-arduino">
+const int outputPin = 3;
+
+void setup() {
+  pinMode(outputPin, OUTPUT);
+  Serial.begin(9600);
+  Serial.println("Enter Volts 0 to 5"); //Ddemana que el usuari entri per la consoola o serial monitor del ARDUINO IDE un número entre 0 i 5
+    //Println significa imprimeix una linea i li apliquem en la sintaxis del punt a la clase serial pot rebre diversos paràmetres, si els posem entre cometes i s'escriu tal cual i si no, escriu el varol de la variable.
+}
+
+void loop() { //És un sistema que no s'atura mai, es repeteix fins que desconecto el arduino.
+  if (Serial.available() > 0) { //Serial.available és un mètode que espera caràcters, major a 0 és que hi ha un caràcter.
+    float volts = Serial.parseFloat(); //parseFloat és una funció o mètode que s'aplica a l'objecte serial i la seva funció és parsejar o analitzar 
+    //el contingut de caràcters que arriba pel port serial i si és de tipus decimal o fating point number(número amb coma flotant) o variable tipo float.
+    //Les variables float inclouen les variables int o integer o números sencers. També existeix parse int que només accertaria números enters.
+    //Volts emmagatzema el númer decimal que escriu l'usuari.
+    //El float volts que fa? Crea un espai a la memòria anomenat volts que haura de ser del tipus floating point number que emmagatzmarà el que li arribi del port serial escrit per l'usuari.
+    int pwmValue = volts * 255.0 / 5.0; //Els volts no serveixen directament perquè volem pwm, és a dir, no valors entre 0-5 sinó entre 0-255
+    //És entre 0 i 255 perquè és el número de bits que té, té 8 bits, que equival a 2^8 que és 256. Faig una regla de 3 i multiplicoel valor per 255 i divideixo entre 5. Per exemple si l'usuari inserta 2.5, tindras 2.5*255/5=127.5
+    analogWrite(outputPin, pwmValue);
+  }
+}
 </div>
 </code>
 </pre>
