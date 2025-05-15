@@ -43,9 +43,30 @@
 </ul>
   <img src="arduino-musica.webp">
 <pre><button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button><code class="language-arduino">
-void setup() {
-#define NOTE_F#5
-}
+#define NOTE_FS5 740
+#define NOTE_G5  784
+#define NOTE_A5  880
+#define NOTE_B5  988
+int saturno[]{
+  NOTE_FS5, NOTE_FS5, NOTE_FS5, NOTE_G5, NOTE_A5,
+  NOTE_FS5, NOTE_FS5, NOTE_G5, NOTE_A5,
+  NOTE_B5, NOTE_B5, NOTE_B5, NOTE_A5, NOTE_G5,
+  NOTE_A5, NOTE_G5, NOTE_FS5,
+    }
+    int durades[]{
+4, 4, 4, 4, 4,
+4, 4, 4, 4,
+4, 4, 4, 4, 4,
+4, 4, 2
+    }
+void setup(){
 
-void loop() {}
+    }
+void loop(){
+    int numNotes= sizeof(saturno)/sizeof(saturno[0]);
+    //Calculem el número de dividint el número de bytes totals de la canço que ho calcula la funció "sizeof" entre el número de bytes de una de lenotes (en aquest cas
+    la primera). en aquest exemple tenim 5 notes i cada nota ocuparà un número entreque es igual a 2 bytes en arduino. Per tant saturno ocupa 8 bytes
+    que dividit entre el tamany de la prmera nota que són 2 bytes, dona 4 notes musicals. El número 4 el guardem a la variable numNotes
+    //L'avantatge 
+}
 </code></pre>
