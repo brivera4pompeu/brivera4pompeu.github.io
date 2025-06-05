@@ -4,48 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-    <script type="text/javascript" async
-  src="https://cdnjs.cloudflare.com/ajax/mathjax/3.2.0/es5/tex-mml-chtml.js">
-</script>
-    <title>Projecte de robòtica</title>
-    <style>
-        /*Aquest llenguatge és CSS i es pot posarun arxiu extern style.css i escriure el que està a continuació o es pot posar com aqui,
-        entre style i final de style (pràctica no recomenada), també el JavaScript s'hauria de posar en un arxiu extern script.js perquè aixi
-        aconseguim separar l'esquelet on està tot el contingut estatic que està en llenguatge HTML del script.js on està tota la activitat
-        interactiva, de tots els estils (tipus de lletra, colors, marges...) en llenguatge CSS. Així tinc tres arxius un index.html que cridarà
-        a l'style.css i a l'escript.js */
-        /*El CSS significa Cascade Style Sheets o fulles d'estil en cascada i sempre té la mateixa estructura:
-        nometiquetahtml{propietat1:valor1;propietat2:valor2;}
-        Per exemple s'aplica el nom de l'etiqueta HTML "body" una propietat relacionada amb els marges anomenada
-        padding que prové del model CSS Box o model de caixes CSS a l'interior de la caixa tenim el contingut o "content",
-        i al voltant tenim el "padding" que s'expressa en píxel, al voltant tenim el "border", i al voltent tenim el "margin".
-        Si posem un sol número (0 o 10px) s'aplica a tots els costats, si posem dos números s'aplica el primer número a dalt
-        i a baix i el segon s'aplica a dreta i esquerra. Si son tres números, el primer a dalt, el segon a dreta i esquerra i 
-        el tercer a baix. Si afegim quatre números el primer anirà a dalt, el segon a la dreta, el tercer a baix i l'ultim a l'esquerra.
-        Si no recordem l'ordre podem escriure"border-top:10px", "border-bottom:20px", border-right:10px", border-left:30px".
-        "Padding" és similar a "border" o a "margin"*/
-        Body {
-        font-family: "Monaco", monospace;
-            /*Hi ha 3 tipus principals de lletres Serif, Sans-Serif i Monospace, la diferència entre elles es que el Serif té formes
-            més detallades i la Sans-serif no tenen aquests detalls, ja que Sans significa sense. Monospace és molt important per al codi
-            perquè l'amplada de cada lletra sempre és la mateixa. Altres famílies són Cursive i Fantasy. 
-            També podem crear o importar tipus de lletres totalment diferents i son arxius que hem d'importar amb el format OTF (OpenTypeFormat)
-            o TTF (TrueTypeFormat), per exemple, ana Vives té síndrome de Down i lletra pròpia*/
-        padding: 0; /* Elimina l'espai extra al voltant del cos */
-        border:10px 50px;
-        margin:20px;
-}
-        .container-fluid {
-        max-width: 100%; /* Assegura que la navbar ocupa tota l'amplada */
-        /*Container-fluid té un punt davant i aquest punt significa que és una "class", és a dir que hi ha un HTML que 
-        posa "class='container-fluid';" i per exemple podria ser un div o divisor de coontingut.
-        Aquest container té una propietat que es diu "max-width" que significa amplada màxima i el valor que li 
-        hem de donar és 100% de l'amplada. Si fos una id posaria un # i només hi hauria una, pero com és una class
-        pot ser moltes vegades repetida.*/
-
+    <title>Configuració</title>
+    <style>body {
+    padding: 0; /* Elimina l'espai extra al voltant del cos */
 }
 
- .navbar {
+.container-fluid {
+    max-width: 100%; /* Assegura que la navbar ocupa tota l'amplada */
+}
+
+    
+    .navbar {
     padding-left: 0; /* Elimina el padding esquerra de la navbar */
 }
 
@@ -54,10 +23,14 @@
     margin-left: 0; /* Assegurar que no hi hagi marge a l'esquerra */
 }
 
-canvas{
-    border: blue 5px groove;
-    margin: 15px;
-    /* border-style:groove;*/
+    
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+
 }
 
 .brand-text {
@@ -69,11 +42,74 @@ canvas{
             margin-right: 10px; /* Marges laterals ajustats */
             margin-top: 20px; /* Afegeix espai superior entre el contingut i la barra de menú */
         }
+      table{ 
+        width: 50%; // Ocupa el 50% de l'amplada de la pàgina
+        border-collapse: collapse; // Evita que apareixin dobles linies a les cel·les 
+        margin: 20px auto; // Marge de 20px a la part superior i centra la taula
+      }
+      th,td{
+        border: 1px solid #ddd; // Afegeix una vora fina d'un píxel de color gris clar al voltant de totes les cel·les (th i td).
+        padding: 10px;  // Espai intern dins de cada cel·la, per fer-la més llegible.
+        text-align: center // Centrar el text dins de cada cel·la. 
+        } 
+      thead{
+          background: #f4f4f4;  // Canvia el color del fons del thead a gris clar.
+          font-weight: bold;  // Fa que la capçalera de la taula estigui en negreta.
+          }
+      tbody tr: nth-child(even){  // És una pseudoclasse aplicada a tr segons si es parell o imparell, even és parell i odd és imparell.
+          background-color: #f9f9f9;
+          }
+      tbody tr: hover{  // És una pseudoclasse hover per quan passo per sobre amb el ratolí pel contingut de la taula és fa més fosc.
+        background-color: #e2e2e2;  
+      }
     </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+       <a class="navbar-brand d-flex align-items-center" href="#">
+    <img src="logo.png" alt="Logo" width="50" class="logo">
+    <span class="brand-text">Configuració</span>
+</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="https://brivera4pompeu.github.io/robotica">Tornar</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://brivera4pompeu.github.io">Inici</a>
+                </li>
+                </div>
+            </ul>
+        </div>
+    </div>
+</nav>
 </head>
 <body>
   <h1>PROJECTE DE ROBÒTICA</h1>
   <h2>Piano amb Arduino</h2>
-  <p>En aquest apartat ensenyare el meu projecte de robòtica que he estat fent els últims dies de classe que tinc de robòtica.</p>
-  <p>Començo explicant que vull fer: El que estic tratant de fer és un piano amb butons i l'arduino, des de Do(C) fins a Si(B).</p>
+  <p>Benvinguts al nostre projecte de robòtica, en aquesta pàgina jo, Brayan Rivera, i el meu company Jan Barriga, explicarem tot el procés de la creació d'un piano amb Arduino </p>
+  <p>En aquest apartat ensenyare el nostre projecte de robòtica que hem fet els últims dies de classe que tinc de robòtica.</p>
+  <p>Començo explicant que voliem fer: El que estic tratant de fer és un piano amb butons i l'arduino, des de Do(C) fins a Si(B).</p>
+    <h3>Quins materials hem utilitzat?</h3>
+    <p>Per començar, posarem una llista dels materials essencials que hem utilitzat per fer el nostre projecte.</p>
+    <li>
+        <ul>7 botons</ul>
+        <ul>15 cables</ul>
+        <ul>Un Arduino NANO 33 BLE</ul>
+        <ul>Un cable per connectar l'Arduino a l'ordinador</ul>
+        <ul>Un altaveu</ul>
+        <ul>Un protoboard</ul>
+    </li>
+    <h3>Com ho hem fet?</h3>
+    <p>Primer, per Google, vam buscar sobre projectes que podriem fer i mentré buscavem vam trobar un que deia "Piano digital" i ens vam enamorar del projecte.
+    Després d'això, hem entrar en Tinkercad, i vam crear un esquema sobre el projecte que voliem fer. Tras això, vam buscar els compenents que utilitzarem en el projecte
+    amb aquests components, seguint l'esquema, vam montar el circuit que es pot veure en les fotografies de sota.</p>
+    <
 </body>
