@@ -2,25 +2,26 @@ const questions = [
     {
         type: "questions",
         category: "electrics",
-        text:Amb un voltímetre digital es mesura cinc vegades la caiguda de tensió entre els borns d’una pila, i els valors obtinguts són 9,015 V, 9,025 V, 9,000 V, 8,975 V i 8,985 V. Es pot prendre com a resultat de la mesura, amb l’interval d’incertesa corresponent, 9,000 V? 
+        text: `Amb un voltímetre digital es mesura cinc vegades la caiguda de tensió entre els borns d’una pila, i els valors obtinguts són 9,015 V, 9,025 V, 9,000 V, 8,975 V i 8,985 V. Es pot prendre com a resultat de la mesura, amb l’interval d’incertesa corresponent, 9,000 V?`, 
             options: [
             { text: "Sí, perquè és el tercer valor dels cinc obtinguts.", value: "a" },
             { text: "Sí, perquè és la mitjana dels valors obtinguts.", value: "b" },
             { text: "Sí, perquè és el valor més proper a l’última mesura.", value: "c" },
             { text: "Sí, perquè és el valor més proper a la primera mesura.", value: "d" }
+        ],
         correctAnswer: "b",  // No és necessari aquí perquè es tracta d'un exercici obert
     },
     {
         type: "questions", // Tipus de pregunta
-        category: "energia",
-        text: `Un rentaplats ha consumit \\(0{,}9 \\, \\text{kWh}\\) d’energia elèctrica per a escalfar \\(11 \\, \\text{L}\\) d’aigua des d’una temperatura ambient \\(T_{amb} = 10 \\, ^\\circ \\text{C}\\) a una temperatura \\(T = 70 \\, ^\\circ \\text{C}\\). La calor específica de l’aigua és \\(c_e = 4{,}18 \\, \\frac{\\text{J}}{\\text{g} \\cdot ^\\circ \\text{C}}\\). El rendiment del rentaplats és:`,
+        category: "materials",
+        text: ` Una fàbrica de rajoles produeix un model de mides 200 mm  310 mm. Si amb una caixa d’aquestes peces es pot enrajolar una superfície de 0,992 m2, quantes rajoles conté cada caixa com a mínim?`,
         options: [
-            { text: "11,74 %", value: "a" },
-            { text: "27,59 %", value: "b" },
-            { text: "76,63 %", value: "c" },
-            { text: "85,15 %", value: "d" }
+            { text: "14", value: "a" },
+            { text: "15", value: "b" },
+            { text: "16", value: "c" },
+            { text: "17", value: "d" }
         ],
-        correctAnswer: "d",
+        correctAnswer: "c",
         steps: `
             \\[
             m = 11 \\, \\text{L} \\times 1000 \\, \\text{g/L} = 11000 \\, \\text{g}
