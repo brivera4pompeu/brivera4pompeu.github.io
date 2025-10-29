@@ -1,7 +1,7 @@
 const questions = [
     {
         type: "questions",
-        category: "Màquines i sistemes elèctrics i electrotècnics",
+        category: "electrics",
         text:Amb un voltímetre digital es mesura cinc vegades la caiguda de tensió entre els borns d’una pila, i els valors obtinguts són 9,015 V, 9,025 V, 9,000 V, 8,975 V i 8,985 V. Es pot prendre com a resultat de la mesura, amb l’interval d’incertesa corresponent, 9,000 V? 
             options: [
             { text: "Sí, perquè és el tercer valor dels cinc obtinguts.", value: "a" },
