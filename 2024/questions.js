@@ -14,7 +14,7 @@ const questions = [
     {
         type: "questions", // Tipus de pregunta
         category: "materials",
-        text: ` Una fàbrica de rajoles produeix un model de mides 200 mm  310 mm. Si amb una caixa d’aquestes peces es pot enrajolar una superfície de 0,992 m2, quantes rajoles conté cada caixa com a mínim?`,
+        text: ` Una fàbrica de rajoles produeix un model de mides 200 mm x 310 mm. Si amb una caixa d’aquestes peces es pot enrajolar una superfície de 0,992 m^2, quantes rajoles conté cada caixa com a mínim?`,
         options: [
             { text: "14", value: "a" },
             { text: "15", value: "b" },
@@ -24,7 +24,10 @@ const questions = [
         correctAnswer: "c",
         steps: `
             \\[
-            m = 11 \\, \\text{L} \\times 1000 \\, \\text{g/L} = 11000 \\, \\text{g}
+            A = 200 \\, \\text{mm} \\times 310 \\, \\text{mm} = 62000 \\, \\text{mm^2}
+            \\]
+            \\[
+            A = 62000 \\,  \\text{mm^2} \\times frac{\\1 text{m^2}}{\\10^6 text{mm^2}
             \\]
             \\[
             \\Delta T = 70 \\, ^\\circ \\text{C} - 10 \\, ^\\circ \\text{C} = 60 \\, ^\\circ \\text{C}
