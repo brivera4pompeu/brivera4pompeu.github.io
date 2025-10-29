@@ -27,7 +27,7 @@ const questions = [
             A = 200 \\, \\text{mm} \\times 310 \\, \\text{mm} = 62000 \\, \\text{mm^2}
             \\]
             \\[
-            A = 62000 \\,  \\text{mm^2} \\times frac{\\1 text{m^2}}{\\10^6 text{mm^2}
+            A = 62000 \\, \\text{mm^2} \\times frac{1 \\, \\text{m^2}}{10^6 \\, text{mm^2} = 0,062 text{m^2}
             \\]
             \\[
             \\Delta T = 70 \\, ^\\circ \\text{C} - 10 \\, ^\\circ \\text{C} = 60 \\, ^\\circ \\text{C}
