@@ -194,6 +194,7 @@ const questions = [
         { text: "0,47 €/km", value: "d" }
     ],
     correctAnswer: "a",
+    },
     {
     type: "questions",
     category: "materials",
