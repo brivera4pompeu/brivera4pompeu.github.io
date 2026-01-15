@@ -15,13 +15,13 @@ prendre com a resultat de la mesura, amb l’interval d’incertesa corresponent
         correctAnswer: "b",
         steps: `
             \\[
-            V = \\frac{\\text{9.015+9.025+9.000+8.975+8.985}}{\\text{5}} = frac{\\text{45.000}}{\\text{5}} = 9.000 V
+            \\V = \\frac{\\text{9.015+9.025+9.000+8.975+8.985}}{\\text{5}} = frac{\\text{45.000}}{\\text{5}} = 9.000 V
             \\]
             \\[	
-            ΔV = frac{\\text{V_màx-V_mín}}{\\text{2}} = frac{\\text{9.025-8.975}}{\\text{2}} = 0.025V
+            \\ΔV = frac{\\text{V_màx-V_mín}}{\\text{2}} = frac{\\text{9.025-8.975}}{\\text{2}} = 0.025V
             \\]
             \\[
-            V = \\text{(9.000 ± 0.025)}V
+            \\V = \\text{(9.000 ± 0.025)}V
             \\]
             <br><br>
             `
