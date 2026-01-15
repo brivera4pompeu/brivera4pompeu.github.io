@@ -194,24 +194,32 @@ const questions = [
         { text: "0,47 €/km", value: "d" }
     ],
     correctAnswer: "a",
+    {
+    type: "questions",
+    category: "materials",
+    text: `Un vehicle circula entre dues poblacions properes per una carretera de 10 km de longitud a una velocitat de 50 km/h. El cost econòmic del temps emprat per a fer aquest viatge s’estima que és 8,4 €/h, i se sap que el cost econòmic de tot el trajecte és 3,68 €. Quin s’estima que és el cost econòmic directe, en €/km, del vehicle?`,
+    options: [
+        { text: "0,20 €/km", value: "a" },
+        { text: "0,34 €/km", value: "b" },
+        { text: "0,37 €/km", value: "c" },
+        { text: "0,47 €/km", value: "d" }
+    ],
+    correctAnswer: "a",
     steps: `
         \\[
         L = 10 \\, \\text{km}, \\quad v = 50 \\, \\text{km/h}
         \\]
         \\[
-        t = \\frac{L}{v} = \\frac{10}{50} = 0{,}2 \\, \\text{h}
+        t = \\frac{L}{v} = \\frac{10}{50} = 0.2 \\, \\text{h}
+        \\]
+        \\text{Cost del temps: } C_{temps} = 8.4 \\times 0.2 = 1.68
+        \\]
+        \\text{Cost total: } C_{total} = 3.68
+        \\]
+        \\text{Cost directe: } C_{directe} = C_{total} - C_{temps} = 3.68 - 1.68 = 2.00
         \\]
         \\[
-        C_{temps} = 8{,}4 \\, €/h \\times 0{,}2 \\, h = 1{,}68 \\, €
-        \\]
-        \\[
-        C_{total} = 3{,}68 \\, €
-        \\]
-        \\[
-        C_{directe} = C_{total} - C_{temps} = 3{,}68 - 1{,}68 = 2{,}00 \\, €
-        \\]
-        \\[
-        C_{directe/km} = \\frac{2{,}00 \\, €}{10 \\, \\text{km}} = 0{,}20 \\, €/km
+        C_{directe/km} = \\frac{2.00}{10} = 0.20 \\, \\text{€/km}
         \\]
         <br><br>`
 },
@@ -607,18 +615,141 @@ const questions = [
         <br>
         <img src="https://brivera4pompeu.github.io/2024/images/5Serie20082.png" alt="Imatge relacionada amb la pregunta" width="500">
         <br><br>
-
         <strong>b) Resolució: Funció lògica</strong>
         <br>
         <img src="https://brivera4pompeu.github.io/2024/images/5Serie20083.png" alt="Imatge relacionada amb la pregunta" width="500">
         <br><br>
-
         <strong>c) Resolució: Esquema de portes</strong>
         <br>
         <img src="https://brivera4pompeu.github.io/2024/images/5Serie20084.png" alt="Imatge relacionada amb la pregunta" width="500">  
         <br>
         <img src="ruta/a/imatgeEsquemaPorta.jpg" alt="Esquema de portes lògiques de la porta">
         <br><br>
+    `
+},
+{
+    type: "exercicis",
+    category: "energia",
+    text: `
+        Un vehicle amb motor de gasoil que circula a una velocitat mitjana \\(v = 70 \\, \\text{km/h}\\) té un consum mitjà \\(c = 5,9 \\, \\text{l/100 km}\\) en un recorregut de \\(s = 155 \\, \\text{km}\\), sense fer funcionar l’aire condicionat.  
+        L’aire condicionat incrementa el consum del vehicle en \\(c_a = 0,25 \\, \\text{l/h}\\).  
+        El rendiment del motor és \\(\\eta = 0,32\\), i el poder calorífic del gasoil és \\(c_e = 35,8 \\, \\text{MJ/l}\\).
+
+        Determineu:
+
+        <br><strong>a)</strong> La quantitat \\(q\\) de gasoil consumida en el trajecte, amb aire condicionat i sense. [1 punt]
+
+        <br><strong>b)</strong> L’increment de consum \\(\\Delta c\\), expressat en l/100 km, per l’ús de l’aire condicionat. [0,5 punts]
+
+        <br><strong>c)</strong> La potència \\(P\\) subministrada a l’equip d’aire condicionat. [0,5 punts]
+
+        <br><strong>d)</strong> Raoneu quina incidència té en el consum total un augment de la velocitat mitjana. [0,5 punts]
+        <br><br>
+    `,
+    correctAnswer: "",
+    steps: `
+        <strong>a) Resolució: Quantitat de gasoil consumida</strong>
+        <br>
+        - Sense aire condicionat:  
+        \\[ q_{sense} = c \\cdot \\frac{s}{100} = 5,9 \\cdot \\frac{155}{100} = 9,145 \\, \\text{l} \\]
+        - Temps de trajecte: \\( t = \\frac{s}{v} = \\frac{155}{70} \\approx 2,214 \\, \\text{h} \\)  
+        - Consum addicional per aire condicionat: \\( q_{AC} = c_a \\cdot t = 0,25 \\cdot 2,214 \\approx 0,554 \\, \\text{l} \\)  
+        - Consum total amb aire condicionat:  
+        \\[ q_{amb} = q_{sense} + q_{AC} = 9,145 + 0,554 \\approx 9,699 \\, \\text{l} \\]
+        <br><br>
+
+        <strong>b) Resolució: Increment de consum per 100 km</strong>
+        <br>
+        \\[ \\Delta c = \\frac{q_{AC}}{s} \\cdot 100 = \\frac{0,554}{155} \\cdot 100 \\approx 0,357 \\, \\text{l/100 km} \\]
+        <br><br>
+
+        <strong>c) Resolució: Potència subministrada a l’aire condicionat</strong>
+        <br>
+        \\[ P_{AC} = \\frac{c_a \\cdot c_e}{\\eta} = \\frac{0,25 \\, \\text{l/h} \\cdot 35,8 \\cdot 10^6 \\, \\text{J/l}}{3600 \\, \\text{s} \\cdot 0,32} \\approx 795,6 \\, \\text{W} \\]
+        <br><br>
+
+        <strong>d) Resolució: Incidència de la velocitat mitjana</strong>
+        <br>
+        - Si s’augmenta la velocitat mitjana, disminueix el temps del trajecte, per tant disminueix el consum de l’aire condicionat.  
+        - Ara bé, un augment de la velocitat també implica un increment de les resistències passives del vehicle (aerodinàmiques i de rodes), que fan augmentar el consum de combustible.  
+        - Per tant, el consum total no garanteix una disminució; depèn de l’equilibri entre menys temps d’AC i més resistències.
+    `
+},
+{
+    type: "exercicis",
+    category: "motors",
+    text: `
+        Un motor de corrent continu té les següents característiques:  
+  
+        Si aquest s’alimenta amb \\(U = 24 \\, \\text{V}\\):
+        <img src="https://brivera4pompeu.github.io/2024/images/5Serie20085.png" alt="Imatge relacionada amb la pregunta" width="500">
+        Determineu:
+
+        <br><strong>a)</strong> L’expressió que relaciona el parell motor amb la velocitat angular (sense I). [0,5 punts]
+
+        <br><strong>b)</strong> Dibuixeu la corba característica parell-velocitat per a \\(0 \\leq \\omega \\leq 300 \\, \\text{rad/s}\\). [1 punt]
+
+        <br><strong>c)</strong> Calculeu l’energia elèctrica \\(E\\) que consumeix el motor si funciona contínuament durant \\(t = 1,5 \\, h\\) amb un parell \\(\\Gamma = 0,3 \\, \\text{N·m}\\). [1 punt]
+        <br><br>
+    `,
+    correctAnswer: "",
+    steps: `
+        <strong>a) Resolució: Expressió parell-velocitat</strong>
+        <br>
+        <img src="https://brivera4pompeu.github.io/2024/images/5Serie20087.png" alt="Imatge relacionada amb la pregunta" width="500">
+        <br><strong>b) Resolució: Corba parell-velocitat</strong>
+        <br>
+        <img src="https://brivera4pompeu.github.io/2024/images/5Serie20086.png" alt="Imatge relacionada amb la pregunta" width="500">
+        <br>
+        <br><strong>c) Energia consumida per manteniment</strong>
+        <br>
+        - Temps de funcionament: 12 h = 12·3600 s = 43200 s  
+        - Potència de l’aire condicionat / manteniment:  
+        \\[ P = P_f / \\eta = 1231 \\cdot 13 / 0,8 \\approx 20003 \\, W \\]  
+        - Energia consumida:  
+        \\[ E = P \\cdot t = 20003 \\cdot 43200 \\approx 8,64 \\times 10^8 \\, \\text{J} \\approx 135 \\, \\text{Wh} \\]
+    `
+},
+{
+    type: "exercicis",
+    category: "energia",
+    text: `
+        Una bomba elèctrica emprada per a elevar aigua per a regar un petit hort té les característiques nominals següents:  
+        - Cabal: \\(q = 75 \\, \\text{l/min}\\)  
+        - Pressió: \\(p = 0,56 \\, \\text{MPa}\\)  
+        - Rendiment del motor: \\(\\eta_{mot} = 0,8\\)  
+        - Potència del motor a \\(n = 2850 \\, \\text{min⁻¹}\\): \\(P_{mot} = 950 \\, \\text{W}\\)  
+        - Cost de l’energia elèctrica: \\(c = 0,10 \\, €/\\text{kWh}\\)
+
+        Determineu:
+
+        <br><strong>a)</strong> Rendiment de la bomba. [1 punt]  
+        <br><strong>b)</strong> Quantitat \\(V\\) d’aigua elevada en \\(t = 3 \\, h\\). [0,5 punts]  
+        <br><strong>c)</strong> Cost econòmic de l’energia elèctrica consumida per m³ d’aigua elevada. [1 punt]
+        <br><br>
+    `,
+    correctAnswer: "",
+    steps: `
+        <strong>a) Rendiment de la bomba</strong>
+        <br>
+        - Potència hidràulica:  
+        \\[ P_h = q \\cdot p = 75 \\frac{l}{min} \\cdot 0,56 \\text{MPa} \\]  
+        Convertim unitats: 75 l/min = 0,00125 m³/s, 0,56 MPa = 560000 Pa  
+        \\[ P_h = 0,00125 \\cdot 560000 = 700 \\, W \\]  
+        - Rendiment de la bomba:  
+        \\[ \\eta_{bomba} = \\frac{P_h}{P_{mot}} = \\frac{700}{950} \\approx 0,7368 \\]
+
+        <br><strong>b) Quantitat d’aigua elevada</strong>
+        <br>
+        - Temps de funcionament: \\( t = 3 \\, h = 180 \\, min \\)  
+        - Cabal total: \\( V = q \\cdot t = 75 \\, \\text{l/min} \\cdot 180 \\, \\text{min} = 13500 \\, \\text{l} \\)
+
+        <br><strong>c) Cost econòmic per m³</strong>
+        <br>
+        - Energia consumida: \\( E = P_{mot} \\cdot t = 950 \\, \\text{W} \\cdot 3 \\, h = 2850 \\, \\text{Wh} = 2,85 \\, \\text{kWh} \\)  
+        - Convertim volum a m³: \\( V = 13500 \\, \\text{l} = 13,5 \\, \\text{m³} \\)  
+        - Cost per m³:  
+        \\[ c_e = \\frac{E \\cdot c}{V} = \\frac{2,85 \\cdot 0,10}{13,5} \\approx 0,02639 \\, €/\\text{m³} \\]
     `
 },
 ];
