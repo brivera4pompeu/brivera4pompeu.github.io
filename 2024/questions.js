@@ -267,7 +267,7 @@ const questions = [
     text: `
     Un tendal automàtic està equipat amb un sensor que el plega o el desplega en funció de
     les condicions meteorològiques. Utilitzant les variables d’estat:
-    <img src="https:brivera4pompeu.github.io/2024/images/2Serie20081.png" alt="Imatge relacionada amb la pregunta" width="900">
+    <img src="https://brivera4pompeu.github.io/2024/images/2Serie20081" alt="Imatge relacionada amb la pregunta" width="900">
     <br><strong>a)</strong> Escriviu la taula de veritat del sistema. [1 punt]
     <br><strong>b)</strong> Determineu la funció lògica entre aquestes variables i, si escau, simplifiqueu-la. [1 punt]
     <br><strong>c)</strong> Dibuixeu l’esquema de contactes equivalent. [0,5 punts]
@@ -301,11 +301,54 @@ const questions = [
 
         <strong>Resolució c) Esquema de contactes equivalent:</strong>
         <br>
-        - **Desplegar:** contactes en sèrie amb \\(\\overline{v}\\) i \\(s\\) i amb \\(t = 1\\) segons condició.
+           <img src="https://brivera4pompeu.github.io/2024/images/2Serie20083" alt="Imatge relacionada amb la pregunta" width="500">
+        <br><br>
+    `
+}
+{
+    type: "exercicis",
+    category: "energia",
+    text: `
+        Un sistema de calefacció amb gas natural, de poder calorífic \\(p = 39,9 \\, \\text{MJ/kg}\\) i cost 
+        \\(c = 0,19 \\, €/kg\\), escalfa l’aire d’un local de volum \\(V = 750 \\, \\text{m}^3\\). 
+        Inicialment, la temperatura del local és la mateixa que la temperatura exterior, \\(t_1 = 10\\,ºC\\), 
+        i es vol escalfar fins a \\(t_2 = 23\\,ºC\\).  
+        Per a aquest rang de temperatures, la densitat de l’aire és \\(\\rho = 1,2 \\, \\text{kg/m}^3\\), 
+        i la calor específica \\(c_p = 1 \\, \\text{kJ/(kg·K)}\\).  
+        El rendiment del sistema de calefacció és \\(\\eta = 80\\%\\).
+
+        <br><strong>a)</strong> Si no hi ha fuites, determineu el cost econòmic \\(c_1\\) del combustible per a escalfar l’aire del local. [1 punt]
+
+        <br><strong>b)</strong> Es suposa que les fuites a través dels orificis i parets són proporcionals a la diferència 
+        \\(t\\) entre la temperatura interior \\(t_{int}\\) i la temperatura exterior \\(t_{ext}\\), de manera que \\(P_f = k \cdot t\\), si \\(k = 1231 \\, \\text{W/ºC}\\).  
+        Representeu, de manera aproximada i indicant les escales, el gràfic de la potència \\(P_f\\) per a \\(0 \\le t \\le 13ºC\\). [1 punt]
+
+        <br><strong>c)</strong> Determineu el cost econòmic \\(c_2\\) del combustible per a mantenir calent durant 12 h l’aire del local quan \\(t = 13ºC\\). [0,5 punts]
+        <br><br>
+    `,
+    correctAnswer: "",
+    steps: `
+        <strong>a) Resolució: Cost econòmic \\(c_1\\) sense fuites</strong>
         <br>
-        - **Plegar:** contactes en paral·lel amb \\(v\\) o \\(\\overline{s}\\) i \\(t = 0\\).
+        - Massa d’aire: \\[ m = \\rho \\cdot V = 1,2 \\cdot 750 = 900 \\, \\text{kg} \\]
+        - Energia necessària: \\[ Q = m \\cdot c_p \\cdot (t_2 - t_1) = 900 \\cdot 1 \\cdot (23-10) = 11700 \\, \\text{kJ} = 11,7 \\, \\text{MJ} \\]
+        - Energia útil del combustible: \\[ E_{comb} = \\frac{Q}{\\eta} = \\frac{11,7}{0,8} = 14,625 \\, \\text{MJ} \\]
+        - Quantitat de combustible: \\[ m_{gas} = \\frac{E_{comb}}{p} = \\frac{14,625}{39,9} \\approx 0,3665 \\, \\text{kg} \\]
+        - Cost: \\[ c_1 = m_{gas} \\cdot c = 0,3665 \\cdot 0,19 \\approx 0,07 \\, € \\]
+        <br><br>
+
+        <strong>b) Resolució: Gràfic aproximat de la potència de fuites \\(P_f\\)</strong>
         <br>
-        Això permet representar el control del tendal mitjançant un circuit de contactes segons les condicions meteorològiques i l’estat actual.
+        <img src="https://brivera4pompeu.github.io/2024/images/2Serie20082" alt="Imatge relacionada amb la pregunta" width="900">
+        <br><br>
+        <strong>c) Resolució: Cost econòmic \\(c_2\\) per mantenir calent durant 12 h</strong>
+        <br>
+        - Potència de fuites per \\(t = 13ºC\\): \\( P_f = 1231 \\cdot 13 = 16003 \\, W = 16,003 \\, kW \\)
+        - Energia consumida en 12 h: \\[ E = P_f \\cdot 12 \\text{h} = 16,003 \\cdot 12 = 192,036 \\, kWh \\]  
+        - Convertim a MJ: \\[ E = 192,036 \\cdot 3,6 = 691,33 \\, MJ \\]
+        - Energia útil del combustible: \\[ E_{comb} = \\frac{E}{\\eta} = \\frac{691,33}{0,8} \\approx 864,16 \\, MJ \\]
+        - Quantitat de combustible: \\[ m_{gas} = \\frac{E_{comb}}{p} = \\frac{864,16}{39,9} \\approx 21,65 \\, kg \\]
+        - Cost: \\[ c_2 = m_{gas} \\cdot c = 21,65 \\cdot 0,19 \\approx 4,11 \\, € \\]
         <br><br>
     `
 }
