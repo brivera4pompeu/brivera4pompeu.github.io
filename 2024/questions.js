@@ -929,7 +929,7 @@ const questions = [
         Una estufa de butà té 4 cremadors iguals, dels quals poden funcionar simultàniament 1, 2 o 4.  
         Cada cremador encès consumeix \\( c = 72 \\, \\text{g/h} \\) de butà.  
         El poder calorífic del butà és \\( p_c = 49,5 \\, \\text{MJ/kg} \\).  
-        El butà es subministra en bombones que en contenen \\( m_b = 12,5 \\, \\text{kg} \\) i valen \\( p_{bomb} = 11,24 \\, € \\).
+        El butà es subministra en bombones que en contenen \\( m_b = 12,5 \\, \\text{kg} \\) i valen \\( p_{bomb} = 11,24 \\, \text{euros} \\).
 
         Determineu:
 
@@ -974,11 +974,11 @@ const questions = [
         \\]  
         - Cost per hora:  
         \\[
-        C_h = p_{bomb} \\cdot \\frac{c_{total}}{m_b} = 11,24 \\cdot \\frac{0,288}{12,5} \\approx 0,259 \\, €
+        C_h = p_{bomb} \\cdot \\frac{c_{total}}{m_b} = 11,24 \\cdot \\frac{0,288}{12,5} \\approx 0,259 \\, \\text{euros}
         \\]  
         - Preu per kW·h:  
         \\[
-        p = \\frac{C_h}{E} = \\frac{0,259}{3,96} \\approx 0,0654 \\, €/kW\\cdot h
+        p = \\frac{C_h}{E} = \\frac{0,259}{3,96} \\approx 0,0654 \\, \\text{euros/kWh}
         \\]
     `
 },
