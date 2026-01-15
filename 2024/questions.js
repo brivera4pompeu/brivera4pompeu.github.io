@@ -752,5 +752,49 @@ const questions = [
         \\[ c_e = \\frac{E \\cdot c}{V} = \\frac{2,85 \\cdot 0,10}{13,5} \\approx 0,02639 \\, €/\\text{m³} \\]
     `
 },
+{
+    type: "exercicis",
+    category: "materials",
+    text: `
+        Per a mantenir oberta la finestra de la figura, s’utilitza la barra articulada PP'.  
+        La finestra té una massa \\( m = 8 \\, \\text{kg} \\), la barra principal té longitud \\(s = 300 \\, \\text{mm}\\) i el puntal \\(b = 350 \\, \\text{mm}\\). L’angle de la barra amb la horizontal és \\(\\alpha = 30°\\).
+        <img src="https://brivera4pompeu.github.io/2024/images/5Serie20088.png" alt="Imatge relacionada amb la pregunta" width="500">
+        Determineu:
+
+        <br><strong>a)</strong> La força \\(F\\) que fa la barra. [1 punt]  
+        <br><strong>b)</strong> Els components vertical \\(F_v\\) i horitzontal \\(F_h\\) de la força que la frontissa O fa a la finestra. [1 punt]  
+        <br><strong>c)</strong> Expliqueu si, per a \\(\\alpha = 0\\), la solució amb un cilindre pneumàtic és adequada per iniciar l’obertura de la finestra. [0,5 punts]
+        <br><br>
+    `,
+    correctAnswer: "",
+    steps: `
+        <strong>a) Força de la barra PP'</strong>
+        <br>
+        - Equilibri de moments respecte O:  
+        \\[
+        \\sum M(O) = 0 \\, \\Rightarrow \\, m g \\cdot s - F \\cdot b \\cdot \\sin\\alpha / \\sin\\alpha_2 = 0
+        \\]  
+        - Força de la barra:  
+        \\[
+        F = 38,83 \\, \\text{N}
+        \\]
+
+        <br><strong>b) Components de la força a la frontissa</strong>
+        <br>
+        - Component vertical:  
+        \\[
+        F_v = F \\cos\\alpha + m g \\approx 44,83 \\, \\text{N}
+        \\]  
+        - Component horitzontal:  
+        \\[
+        F_h = F \\sin\\alpha \\approx 19,41 \\, \\text{N}
+        \\]
+
+        <br><strong>c) Aplicació del cilindre pneumàtic</strong>
+        <br>
+        - Quan \\(\\alpha = 0\\) la força del cilindre passa pel punt O i per tant **no es genera moment per iniciar l’obertura**.  
+        - Conclusió: no és una bona solució per iniciar el moviment de la finestra.
+    `
+},
 ];
 
