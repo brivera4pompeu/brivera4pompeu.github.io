@@ -267,7 +267,7 @@ const questions = [
     text: `
     Un tendal automàtic està equipat amb un sensor que el plega o el desplega en funció de
     les condicions meteorològiques. Utilitzant les variables d’estat:
-    <img src="https://brivera4pompeu.github.io/2024/images/2Serie20081.png" alt="Imatge relacionada amb la pregunta" width="900">
+    <img src="https://brivera4pompeu.github.io/2024/images/2Serie20081.png" alt="Imatge relacionada amb la pregunta" width="500">
     <br><strong>a)</strong> Escriviu la taula de veritat del sistema. [1 punt]
     <br><strong>b)</strong> Determineu la funció lògica entre aquestes variables i, si escau, simplifiqueu-la. [1 punt]
     <br><strong>c)</strong> Dibuixeu l’esquema de contactes equivalent. [0,5 punts]
@@ -371,10 +371,10 @@ const questions = [
 
         <strong>c) Resolució: Potències \\(P_1\\) i \\(P_2\\)</strong>
         <br>
+        - Potència amb una resistència sola (en sèrie o posició 1): 
         \\[ P_1 = \\frac{U^2}{R_{mín}} = \\frac{230^2}{35} = \\frac{52900}{35} \\approx 1511,4 \\, W \\]
-        - Potència amb una resistència sola (en sèrie o posició 1):  
-        \\[ P_2 = \\frac{U^2}{R} = \\frac{230^2}{70} = \\frac{52900}{70} \\approx 755,7 \\, W \\]  
         - Potència amb les dues resistències en paral·lel:  
+        \\[ P_2 = \\frac{U^2}{R} = \\frac{230^2}{70} = \\frac{52900}{70} \\approx 755,7 \\, W \\]    
         <br><br>
         
         <strong>d) Resolució: Longitud del fil \\(L\\)</strong>
@@ -430,7 +430,8 @@ const questions = [
     type: "exercicis",
     category: "maquines",
     text: `
-        <img src="https://brivera4pompeu.github.io/2024/images/2Serie20083.png" alt="Imatge relacionada amb la pregunta" width="500">
+        <img src="https://brivera4pompeu.github.io/2024/images/2Serie20087.png" alt="Imatge relacionada amb la pregunta" width="500">
+        
         La finestra horitzontal es manté oberta mitjançant la corda AC, que en la posició indicada, 
         \\(\\alpha = 30º\\), queda perpendicular a AB (la finestra). La finestra té una massa \\(m = 9 \\, kg\\) 
         i longitud \\(L_2 = 0,82 \\, m\\). La corda està unida a un punt A a \\(L_1 = 0,4 \\, m\\) de la frontissa B.
@@ -468,5 +469,93 @@ const questions = [
         <br><br>
     `
 },
+{
+    type: "questions",
+    category: "materials",
+    text: `L’aprofitament de restes vegetals i deixalles orgàniques per a produir adob orgànic que substitueixi els fertilitzants químics és un procés`,
+    options: [
+        { text: "inútil, perquè es necessita molt de temps per a poder fer el procés correctament.", value: "a" },
+        { text: "inútil, perquè l’adob que s’obté no té la qualitat dels fertilitzants químics.", value: "b" },
+        { text: "inútil, perquè es necessita molt d’espai per a poder fer el procés correctament.", value: "c" },
+        { text: "útil, perquè forma part dels mecanismes de recuperació, reciclatge i reutilització dels residus.", value: "d" }
+    ],
+    correctAnswer: "d",
+    `
+        <br><br>`
+},
+{
+    type: "questions", // Tipus de pregunta
+    category: "electrics",
+    text: `Un amperímetre dóna el resultat d’una mesura en mA. El full de característiques de l’amperímetre indica que per a l’escala en mA la precisió és ± 1,5 mA ± 1% de la lectura. L’error relatiu màxim d’una lectura de 300 mA és:`,
+    options: [
+        { text: "1,5%", value: "a" },
+        { text: "2,5%", value: "b" },
+        { text: "3,0%", value: "c" },
+        { text: "4,5%", value: "d" }
+    ],
+    correctAnswer: "a",
+    steps: `
+        <strong>Pas a pas:</strong>
+        <br>
+        - Error absolut segons característiques:  
+        \\[ \\Delta I = ±1,5 \\, \\text{mA} \\]
+        <br>
+        - Error relatiu màxim de la lectura:  
+        \\[ \\varepsilon_{max} = \\frac{\\Delta I}{I_{lectura}} \\cdot 100 = \\frac{1,5}{300} \\cdot 100 \\approx 0,5\\% \\]
+        <br>
+        - Com la precisió indica ±1,5 mA + 1% de la lectura, però el problema només considera el terme fix, l’error relatiu màxim és:  
+        \\[ \\varepsilon_{max} = 1,5\\% \\]
+    `
+},
+   {
+    type: "questions", // Tipus de pregunta
+    category: "materials",
+    text: `Un comprimit per a combatre el refredat és format per tres components principals, amb una proporció del 62,5%, el 31,25 % i l’1,25 %, respectivament. El 5 % restant es reparteix entre altres components. Quina quantitat del component majoritari és necessària per a obtenir 30 kg d’aquests comprimits?`,
+    options: [
+        { text: "18,75 kg", value: "a" },
+        { text: "11,25 kg", value: "b" },
+        { text: "9,375 kg", value: "c" },
+        { text: "6,25 kg", value: "d" }
+    ],
+    correctAnswer: "a",
+    steps: `
+        <strong>Pas a pas:</strong>
+        <br>
+        - Component majoritari: 62,5% del total.  
+        <br>
+        - Total de comprimits: 30 kg  
+        <br>
+        - Quantitat del component majoritari:  
+        \\[ m = 30 \\cdot 0,625 = 18,75 \\, \\text{kg} \\]
+    `
+},
+{
+    type: "questions", // Tipus de pregunta
+    category: "materials",
+    text: `Una barra d’alumini mesurada a 20°C amb un regle d’acer inoxidable té una longitud L20. Quina seria la longitud que es mesuraria a 40 °C, a causa de la dilatació tèrmica? (Coeficient de dilatació tèrmica de l’alumini: \\(\\alpha_{Al} = 23,6\\cdot 10^{-6} \\, K^{-1}\\), i de l’acer inoxidable: \\(\\alpha_{inox} = 9,9\\cdot 10^{-6} \\, K^{-1}\\).)`,
+    options: [
+        { text: "> L20", value: "a" },
+        { text: "< L20", value: "b" },
+        { text: "= L20", value: "c" },
+        { text: "> L20 o < L20, depenent del valor de L20", value: "d" }
+    ],
+    correctAnswer: "a",
+    steps: `
+        <strong>Pas a pas:</strong>
+        <br>
+        - La barra d'alumini es dilata amb la temperatura segons el seu coeficient de dilatació lineal:  
+        \\[ \\Delta L = L_{20} \\cdot \\alpha_{Al} \\cdot \\Delta T \\]
+        <br>
+        - Diferència de temperatura:  
+        \\[ \\Delta T = 40 - 20 = 20 \\, °C \\]
+        <br>
+        - Increment de longitud:  
+        \\[ \\Delta L = L_{20} \\cdot 23,6 \\cdot 10^{-6} \\cdot 20 \\approx L_{20} \\cdot 4,72 \\cdot 10^{-4} > 0 \\]
+        <br>
+        - Per tant, la longitud mesurada a 40 °C serà:  
+        \\[ L_{40} = L_{20} + \\Delta L > L_{20} \\]
+    `
+},
+
 ];
 
