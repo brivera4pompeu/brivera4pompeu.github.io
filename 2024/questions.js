@@ -438,9 +438,7 @@ const questions = [
 {
     type: "exercicis",
     category: "maquines",
-    text: `
-        <img src="https://brivera4pompeu.github.io/2024/images/2Serie20087.png" alt="Imatge relacionada amb la pregunta" width="500">
-        
+    text: `        
         La finestra horitzontal es manté oberta mitjançant la corda AC, que en la posició indicada, 
         \\(\\alpha = 30º\\), queda perpendicular a AB (la finestra). La finestra té una massa \\(m = 9 \\, kg\\) 
         i longitud \\(L_2 = 0,82 \\, m\\). La corda està unida a un punt A a \\(L_1 = 0,4 \\, m\\) de la frontissa B.
@@ -453,6 +451,7 @@ const questions = [
 
         <br><strong>c)</strong> La força vertical \\(F_v\\) i horitzontal \\(F_h\\) que fa la frontissa. [1 punt]
         <br><br>
+        <img src="https://brivera4pompeu.github.io/2024/images/2Serie20087.png" alt="Imatge relacionada amb la pregunta" width="500">
     `,
     correctAnswer: "",
     steps: `
@@ -680,10 +679,8 @@ const questions = [
     type: "exercicis",
     category: "motors",
     text: `
-        Un motor de corrent continu té les següents característiques:  
-  
-        Si aquest s’alimenta amb \\(U = 24 \\, \\text{V}\\):
         <img src="https://brivera4pompeu.github.io/2024/images/5Serie20085.png" alt="Imatge relacionada amb la pregunta" width="500">
+        Un motor de corrent continu té les característiques anteriors i aquest s’alimenta amb \\(U = 24 \\, \\text{V}\\):
         Determineu:
 
         <br><strong>a)</strong> L’expressió que relaciona el parell motor amb la velocitat angular (sense I). [0,5 punts]
@@ -756,9 +753,9 @@ const questions = [
     type: "exercicis",
     category: "materials",
     text: `
+        <img src="https://brivera4pompeu.github.io/2024/images/5Serie20088.png" alt="Imatge relacionada amb la pregunta" width="500">
         Per a mantenir oberta la finestra de la figura, s’utilitza la barra articulada PP'.  
         La finestra té una massa \\( m = 8 \\, \\text{kg} \\), la barra principal té longitud \\(s = 300 \\, \\text{mm}\\) i el puntal \\(b = 350 \\, \\text{mm}\\). L’angle de la barra amb la horizontal és \\(\\alpha = 30°\\).
-        <img src="https://brivera4pompeu.github.io/2024/images/5Serie20088.png" alt="Imatge relacionada amb la pregunta" width="500">
         Determineu:
 
         <br><strong>a)</strong> La força \\(F\\) que fa la barra. [1 punt]  
@@ -834,9 +831,9 @@ const questions = [
     type: "exercicis",
     category: "materials",
     text: `
+        <img src="https://brivera4pompeu.github.io/2024/images/4Serie20084.png" alt="Imatge relacionada amb la pregunta" width="500">
         En un anunci publicitari es penja un camió de massa \\( m = 3 500 \\, \\text{kg} \\) tal com s’indica en la figura, i es manté en repòs.  
         Es negligeix la massa dels cables i el diàmetre dels cables és \\( d = 15 \\, \\text{mm} \\).
-        <img src="https://brivera4pompeu.github.io/2024/images/4Serie20084.png" alt="Imatge relacionada amb la pregunta" width="500">
         Determineu:
 
         <br><strong>a)</strong> Els angles \\(\\phi_1\\) i \\(\\phi_2\\) indicats. [1 punt]  
@@ -986,9 +983,9 @@ const questions = [
     type: "exercicis",
     category: "energia",
     text: `
+        <img src="https://brivera4pompeu.github.io/2024/images/4Serie20085.png" alt="Imatge relacionada amb la pregunta" width="500">
         Una garlanda nadalenca lluminosa d’un carrer està composta de dues estrelles de tub lluminós i té la forma indicada a la figura.  
         El tub està format per petits elements lluminosos i consumeix \\( P_{tub} = 60 \\, \\text{W/m} \\) quan es connecta a \\( U = 230 \\, \\text{V} \\).
-        <img src="https://brivera4pompeu.github.io/2024/images/4Serie20085.png" alt="Imatge relacionada amb la pregunta" width="500">
         Determineu:
         <br><strong>a)</strong> La longitud \\( L \\) del tub lluminós d’una garlanda i la longitud total \\( L_t \\) emprada per a construir-ne \\( n = 30 \\). [1 punt]  
         <br><strong>b)</strong> La potència \\( P \\) consumida per una garlanda i la potència total \\( P_t \\) consumida per les 30 garlandes. [1 punt]  
