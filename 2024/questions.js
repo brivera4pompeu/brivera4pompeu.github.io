@@ -95,8 +95,6 @@ const questions = [
         { text: "Sí, sempre que les dues categories compleixin les prestacions mínimes especificades.", value: "d" }
     ],
     correctAnswer: "d",
-    steps: `
-        <br><br>`
 },
 {
     type: "questions",
