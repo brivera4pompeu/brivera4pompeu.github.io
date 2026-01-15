@@ -797,5 +797,235 @@ const questions = [
         - Conclusió: no és una bona solució per iniciar el moviment de la finestra.
     `
 },
+{
+    type: "exercicis",
+    category: "control",
+    text: `
+        Un motor d’un compressor d’aire amb dipòsit acumulador funciona de la manera següent:  
+        - Si el motor està aturat, s’encén quan la pressió del dipòsit és inferior a \\(p_{inf} = 6 \\, \\text{bar}\\).  
+        - Si el motor està en marxa, s’atura quan la pressió és superior a \\(p_{sup} = 8 \\, \\text{bar}\\).  
+
+        Utilitzant les variables d’estat:  
+        <br>
+        \\(p_{inf} = 1\\) si pressió baixa, 0 si no  
+        \\(p_{sup} = 1\\) si pressió alta, 0 si no  
+        \\(m = 1\\) si el motor està en marxa, 0 si aturat  
+        \\(c = 1\\) si hi ha canvi d’estat del motor, 0 si no  
+
+        Determineu:
+
+        <br><strong>a)</strong> Taula de veritat del sistema i casos impossibles. [1 punt]  
+        <br><strong>b)</strong> Funció lògica simplificada que relaciona les variables. [1 punt]  
+        <br><strong>c)</strong> Esquema de portes lògiques equivalent. [0,5 punts]
+        <br><br>
+    `,
+    correctAnswer: "",
+    steps: `
+        <strong>a) Taula de veritat</strong>
+        <img src="https://brivera4pompeu.github.io/2024/images/4Serie20081.png" alt="Imatge relacionada amb la pregunta" width="500">
+        <br><strong>b) Funció lògica simplificada</strong>
+        <br>
+        <img src="https://brivera4pompeu.github.io/2024/images/4Serie20082.png" alt="Imatge relacionada amb la pregunta" width="500">
+        <br><strong>c) Esquema de portes lògiques</strong>
+        <br>
+        <img src="https://brivera4pompeu.github.io/2024/images/4Serie20083.png" alt="Imatge relacionada amb la pregunta" width="500">
+    `
+},
+{
+    type: "exercicis",
+    category: "materials",
+    text: `
+        En un anunci publicitari es penja un camió de massa \\( m = 3 500 \\, \\text{kg} \\) tal com s’indica en la figura, i es manté en repòs.  
+        Es negligeix la massa dels cables i el diàmetre dels cables és \\( d = 15 \\, \\text{mm} \\).
+        <img src="https://brivera4pompeu.github.io/2024/images/4Serie20084.png" alt="Imatge relacionada amb la pregunta" width="500">
+        Determineu:
+
+        <br><strong>a)</strong> Els angles \\(\\phi_1\\) i \\(\\phi_2\\) indicats. [1 punt]  
+        <br><strong>b)</strong> Les forces \\(F_1\\) i \\(F_2\\) que suporten els cables O1C i O2C, respectivament. [1 punt]  
+        <br><strong>c)</strong> Les tensions normals \\(\\sigma_1\\) i \\(\\sigma_2\\) a què estan sotmesos els cables. [0,5 punts]
+        <br><br>
+    `,
+    correctAnswer: "",
+    steps: `
+        <strong>a) Angles dels cables</strong>
+        <br>
+        - Aplicant les relacions geomètriques i la trigonometria del sistema:  
+        \\[
+        \\phi_1 = 18,43° ,\\quad \\phi_2 = 11,21°
+        \\]
+
+        <br><strong>b) Forces dels cables</strong>
+        <br>
+        - Equilibri de forces i moments sobre el punt C:  
+        \\[
+        F_1 = 67,84 \\, \\text{kN} ,\\quad F_2 = 65,63 \\, \\text{kN}
+        \\]
+
+        <br><strong>c) Tensió normal en els cables</strong>
+        <br>
+        - Àrea del cable: \\( A = \\pi (d/2)^2 = \\pi (0,015/2)^2 = 1,767 \\, \\text{10}^{-4} \\, \\text{m}^2 \\)  
+        - Tensió normal:  
+        \\[
+        \\sigma_1 = F_1 / A = 383,9 \\, \\text{MPa}, \\quad \\sigma_2 = F_2 / A = 371,4 \\, \\text{MPa}
+        \\]
+    `
+},
+{
+    type: "exercicis",
+    category: "motors",
+    text: `
+        Un generador elèctric està format per un motor de benzina i un alternador monofàsic.  
+        Les dades nominals són:  
+        - Potència elèctrica: \\( P_{elèctr} = 6000 \\, \\text{W} \\)  
+        - Potència del motor: \\( P_m = 9200 \\, \\text{W} \\)  
+        - Freqüència de gir: \\( n = 3 000 \\, \\text{min}^{-1} \\)  
+        - Capacitat del dipòsit: \\( V = 6,5 \\, \\text{l} \\)  
+        - Autonomia: \\( t_{aut} = 2,5 \\, \\text{h} \\)  
+        - Benzina: poder calorífic \\( p_c = 46 \\, \\text{MJ/kg} \\), densitat \\( \\rho = 0,85 \\, \\text{kg/dm}^3 \\)
+
+        Determineu:
+
+        <br><strong>a)</strong> Rendiment de l’alternador \\( \\eta_{alt} \\). [0,5 punts]  
+        <br><strong>b)</strong> Rendiment del motor \\( \\eta_{motor} \\). [1 punt]  
+        <br><strong>c)</strong> Consum específic del motor \\( c_e \\), en g/(kW·h). [1 punt]
+        <br><br>
+    `,
+    correctAnswer: "",
+    steps: `
+        <strong>a) Rendiment de l’alternador</strong>
+        <br>
+        \\[
+        \\eta_{alt} = \\frac{P_{elèctr}}{P_m} = \\frac{6000}{9200} = 0,652 \\, (65,2\\%)
+        \\]
+
+        <br><strong>b) Rendiment del motor</strong>
+        <br>
+        - Energia mecànica produïda pel motor: \\( E_{mec} = P_m \\cdot t_{aut} \\)  
+        - Energia química del combustible: \\( E_{comb} = V \\cdot \\rho \\cdot p_c \\)  
+        - Calculs:  
+        \\[
+        E_{comb} = 6,5 \\, \\text{l} \\cdot 0,85 \\, \\frac{\\text{kg}}{\\text{l}} \\cdot 46 \\times 10^6 \\, \\text{J/kg} = 254,1 \\times 10^6 \\, \\text{J}
+        \\]  
+        \\[
+        E_{mec} = 9200 \\, \\text{W} \\cdot 2,5 \\, \\text{h} \\cdot 3600 \\, \\text{s/h} = 82,8 \\times 10^6 \\, \\text{J}
+        \\]  
+        \\[
+        \\eta_{motor} = \\frac{E_{mec}}{E_{comb}} = \\frac{82,8}{254,1} = 0,326 \\, (32,6\\%)
+        \\]
+
+        <br><strong>c) Consum específic del motor</strong>
+        <br>
+        - Quantitat de combustible consumit: \\( m_{comb} = V \\cdot \\rho = 6,5 \\cdot 0,85 = 5,525 \\, \\text{kg} \\)  
+        - Energia mecànica produïda: \\( P_m \\cdot t_{aut} = 92,0 \\, \\text{kW} \\cdot 2,5 \\, \\text{h} = 23,0 \\, \\text{kWh} \\)  
+        - Consum específic:  
+        \\[
+        c_e = \\frac{m_{comb}}{P_m \\cdot t_{aut}} = \\frac{5525 \\, \\text{g}}{23,0 \\, \\text{kW·h}} = 240 \\, \\text{g/(kW·h)}
+        \\]
+    `
+},
+{
+    type: "exercicis",
+    category: "energia",
+    text: `
+        Una estufa de butà té 4 cremadors iguals, dels quals poden funcionar simultàniament 1, 2 o 4.  
+        Cada cremador encès consumeix \\( c = 72 \\, \\text{g/h} \\) de butà.  
+        El poder calorífic del butà és \\( p_c = 49,5 \\, \\text{MJ/kg} \\).  
+        El butà es subministra en bombones que en contenen \\( m_b = 12,5 \\, \\text{kg} \\) i valen \\( p_{bomb} = 11,24 \\, € \\).
+
+        Determineu:
+
+        <br><strong>a)</strong> La potència calorífica de cada cremador \\( P_{cremador} \\) i la potència màxima de l’estufa \\( P_{estufa} \\). [1 punt]  
+        <br><strong>b)</strong> La durada \\( t \\) d’una bombona amb els 4 cremadors encesos. [0,5 punts]  
+        <br><strong>c)</strong> El preu \\( p \\) del kW·h obtingut amb aquesta estufa. [1 punt]
+        <br><br>
+    `,
+    correctAnswer: "",
+    steps: `
+        <strong>a) Potència calorífica</strong>
+        <br>
+        - Cada cremador:  
+        \\[
+        P_{cremador} = c \\cdot p_c = 0,072 \\, \\text{kg/h} \\cdot 49,5 \\times 10^6 \\, \\text{J/kg} = 3,564 \\times 10^6 \\, \\text{J/h}
+        \\]  
+        Convertim a W:  
+        \\[
+        P_{cremador} = \\frac{3,564 \\times 10^6}{3600} \\approx 990 \\, \\text{W}
+        \\]  
+        - Estufa amb 4 cremadors:  
+        \\[
+        P_{estufa} = 4 \\cdot 990 = 3960 \\, \\text{W}
+        \\]
+
+        <br><strong>b) Durada d’una bombona amb 4 cremadors</strong>
+        <br>
+        - Consum total per hora:  
+        \\[
+        c_{total} = 4 \\cdot 72 \\, \\text{g/h} = 288 \\, \\text{g/h} = 0,288 \\, \\text{kg/h}
+        \\]  
+        - Durada:  
+        \\[
+        t = \\frac{m_b}{c_{total}} = \\frac{12,5}{0,288} \\approx 43,4 \\, \\text{h}
+        \\]
+
+        <br><strong>c) Preu del kW·h</strong>
+        <br>
+        - Energia total per hora amb 4 cremadors:  
+        \\[
+        E = P_{estufa} \\cdot 1 \\, \\text{h} = 3960 \\, \\text{Wh} = 3,96 \\, \\text{kWh}
+        \\]  
+        - Cost per hora:  
+        \\[
+        C_h = p_{bomb} \\cdot \\frac{c_{total}}{m_b} = 11,24 \\cdot \\frac{0,288}{12,5} \\approx 0,259 \\, €
+        \\]  
+        - Preu per kW·h:  
+        \\[
+        p = \\frac{C_h}{E} = \\frac{0,259}{3,96} \\approx 0,0654 \\, €/kW\\cdot h
+        \\]
+    `
+},
+{
+    type: "exercicis",
+    category: "energia",
+    text: `
+        Una garlanda nadalenca lluminosa d’un carrer està composta de dues estrelles de tub lluminós i té la forma indicada a la figura.  
+        El tub està format per petits elements lluminosos i consumeix \\( P_{tub} = 60 \\, \\text{W/m} \\) quan es connecta a \\( U = 230 \\, \\text{V} \\).
+        <img src="https://brivera4pompeu.github.io/2024/images/4Serie20085.png" alt="Imatge relacionada amb la pregunta" width="500">
+        Determineu:
+        <br><strong>a)</strong> La longitud \\( L \\) del tub lluminós d’una garlanda i la longitud total \\( L_t \\) emprada per a construir-ne \\( n = 30 \\). [1 punt]  
+        <br><strong>b)</strong> La potència \\( P \\) consumida per una garlanda i la potència total \\( P_t \\) consumida per les 30 garlandes. [1 punt]  
+        <br><strong>c)</strong> L’energia \\( E \\), en kW·h, que consumeixen les 30 garlandes en \\( t = 6 \\, h \\) de funcionament. [0,5 punts]
+        <br><br>
+    `,
+    correctAnswer: "",
+    steps: `
+        <strong>a) Longitud del tub</strong>
+        <br>
+        - Longitud d’una garlanda:  
+        \\[
+        L = 18,28 \\, \\text{m}
+        \\]  
+        - Longitud total per 30 garlandes:  
+        \\[
+        L_t = n \\cdot L = 30 \\cdot 18,28 \\approx 548,5 \\, \\text{m}
+        \\]
+
+        <br><strong>b) Potència consumida</strong>
+        <br>
+        - Una garlanda:  
+        \\[
+        P = P_{tub} \\cdot L = 60 \\, \\text{W/m} \\cdot 18,28 \\, \\text{m} \\approx 1097 \\, \\text{W} = 1,097 \\, \\text{kW}
+        \\]  
+        - 30 garlandes:  
+        \\[
+        P_t = n \\cdot P = 30 \\cdot 1,097 \\, \\text{kW} \\approx 32,91 \\, \\text{kW}
+        \\]
+
+        <br><strong>c) Energia consumida en 6 h</strong>
+        <br>
+        \\[
+        E = P_t \\cdot t = 32,91 \\, \\text{kW} \\cdot 6 \\, \\text{h} \\approx 197,5 \\, \\text{kWh}
+        \\]
+    `
+},
 ];
 
