@@ -277,31 +277,17 @@ const questions = [
     steps: `
         <strong>Resolució a) Taula de veritat:</strong>
         <br>
-        <table border="1">
-        <tr><th>v</th><th>s</th><th>t</th><th>c</th></tr>
-        <tr><td>1</td><td>0</td><td>0</td><td>0</td></tr>
-        <tr><td>1</td><td>0</td><td>1</td><td>1</td></tr>
-        <tr><td>0</td><td>1</td><td>0</td><td>0</td></tr>
-        <tr><td>0</td><td>1</td><td>1</td><td>1</td></tr>
-        <tr><td>0</td><td>0</td><td>0</td><td>0</td></tr>
-        <tr><td>0</td><td>0</td><td>1</td><td>1</td></tr>
-        </table>
+        <img src="https://brivera4pompeu.github.io/2024/images/2Serie20084" alt="Imatge relacionada amb la pregunta" width="500">
         <br>
 
         <strong>Resolució b) Funció lògica simplificada:</strong>
         <br>
-        La funció per al canvi d’estat del tendal \\(c\\) es pot expressar com:
-        <br>
-        \\[
-        c = (v \\cdot t) + (\\overline{v} \\cdot s \\cdot \\overline{t}) + (\\overline{v} \\cdot \\overline{s} \\cdot t)
-        \\]
-        <br>
-        Aquesta expressió indica que el tendal es desplega o plega segons les condicions de vent, radiació solar i estat actual del tendal.
+        <img src="https://brivera4pompeu.github.io/2024/images/2Serie20085" alt="Imatge relacionada amb la pregunta" width="500">
         <br>
 
         <strong>Resolució c) Esquema de contactes equivalent:</strong>
         <br>
-           <img src="https://brivera4pompeu.github.io/2024/images/2Serie20083" alt="Imatge relacionada amb la pregunta" width="500">
+        <img src="https://brivera4pompeu.github.io/2024/images/2Serie20083" alt="Imatge relacionada amb la pregunta" width="500">
         <br><br>
     `
 }
@@ -334,7 +320,7 @@ const questions = [
         - Energia necessària: \\[ Q = m \\cdot c_p \\cdot (t_2 - t_1) = 900 \\cdot 1 \\cdot (23-10) = 11700 \\, \\text{kJ} = 11,7 \\, \\text{MJ} \\]
         - Energia útil del combustible: \\[ E_{comb} = \\frac{Q}{\\eta} = \\frac{11,7}{0,8} = 14,625 \\, \\text{MJ} \\]
         - Quantitat de combustible: \\[ m_{gas} = \\frac{E_{comb}}{p} = \\frac{14,625}{39,9} \\approx 0,3665 \\, \\text{kg} \\]
-        - Cost: \\[ c_1 = m_{gas} \\cdot c = 0,3665 \\cdot 0,19 \\approx 0,07 \\, € \\]
+        - Cost: \\[ c_1 = m_{gas} \\cdot c = 0,3665 \\cdot 0,19 \\approx 0,0696 \\, € \\]
         <br><br>
 
         <strong>b) Resolució: Gràfic aproximat de la potència de fuites \\(P_f\\)</strong>
