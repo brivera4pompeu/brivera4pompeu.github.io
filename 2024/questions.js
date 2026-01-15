@@ -316,7 +316,6 @@ const questions = [
     steps: `
         <strong>a) Resolució: Cost econòmic \\(c_1\\) sense fuites</strong>
         <br>
-         <img src="https://brivera4pompeu.github.io/2024/images/2Serie20086" alt="Imatge relacionada amb la pregunta" width="500">
         - Massa d’aire: \\[ m = \\rho \\cdot V = 1,2 \\cdot 750 = 900 \\, \\text{kg} \\]
         - Energia necessària: \\[ Q = m \\cdot c_p \\cdot (t_2 - t_1) = 900 \\cdot 1 \\cdot (23-10) = 11700 \\, \\text{kJ} = 11,7 \\, \\text{MJ} \\]
         - Energia útil del combustible: \\[ E_{comb} = \\frac{Q}{\\eta} = \\frac{11,7}{0,8} = 14,625 \\, \\text{MJ} \\]
@@ -326,8 +325,9 @@ const questions = [
 
         <strong>b) Resolució: Gràfic aproximat de la potència de fuites \\(P_f\\)</strong>
         <br>
-        <img src="https://brivera4pompeu.github.io/2024/images/2Serie20082" alt="Imatge relacionada amb la pregunta" width="900">
+        <img src="https://brivera4pompeu.github.io/2024/images/2Serie20082" alt="Imatge relacionada amb la pregunta" width="500">
         <br><br>
+
         <strong>c) Resolució: Cost econòmic \\(c_2\\) per mantenir calent durant 12 h</strong>
         <br>
         - Potència de fuites per \\(t = 13ºC\\): \\( P_f = 1231 \\cdot 13 = 16003 \\, W = 16,003 \\, kW \\)
@@ -339,6 +339,7 @@ const questions = [
         <br><br>
     `
 }
+
 {
     type: "exercicis",
     category: "electrics",
