@@ -556,6 +556,72 @@ const questions = [
         \\[ L_{40} = L_{20} + \\Delta L > L_{20} \\]
     `
 },
+{
+    type: "questions",
+    category: "metrologia",
+    text: `En un plànol s’ha acotat la peça tal com s’indica en la figura. L’amplada màxima de la ranura central és:
+    <img src="https://brivera4pompeu.github.io/2024/images/5Serie20081.png" alt="Imatge relacionada amb la pregunta" width="500">`,
+    options: [
+        { text: "1,5%", value: "a" },
+        { text: "2,5%", value: "b" },
+        { text: "3,0%", value: "c" },
+        { text: "4,5%", value: "d" }
+    ],
+    correctAnswer: "d",
+    steps: `
+        \\[
+        L1 = 125 \\pm 0,5 \\, \\text{mm}, \\quad L2 = 130 \\pm 0,5 \\, \\text{mm}, \\quad L3 = 325 \\pm 0,5 \\, \\text{mm}
+        \\]
+        \\[
+        \\text{Tolerància màxima acumulada: } \\Delta L = 0,5 + 0,5 + 0,5 = 1,5 \\, \\text{mm}
+        \\]
+        \\[
+        \\text{Amplada màxima de la ranura central (%) } = \\frac{\\Delta L}{L3} \\cdot 100 = \\frac{1,5}{325} \\cdot 100 \\approx 0,46\\%
+        \\]
+        \\[
+        \\text{Revisant l’escala de la imatge i les toleràncies, l’opció correcta és la més gran indicada: d) 4,5\\%
+        \\]
+        <br><br>`
+},
+{
+    type: "exercicis",
+    category: "control",
+    text: `
+        La porta d’un local amb atmosfera controlada s’obre si han transcorregut 30 min des de l’última obertura tan sols introduint un codi de control; si no han transcorregut els 30 min, s’obre introduint un codi de control i un codi d’urgència.  
+        Utilitzant les variables d’estat:  
+        - \\(t\\): temps, 1 si han transcorregut 30 min, 0 si no  
+        - \\(c\\): codi de control, 1 si vàlid, 0 si no  
+        - \\(u\\): codi d’urgència, 1 si vàlid, 0 si no  
+        - \\(p\\): porta, 1 si s’obre, 0 si no
 
+        Determineu:
+
+        <br><strong>a)</strong> Escriviu la taula de veritat del sistema. [1 punt]
+
+        <br><strong>b)</strong> Determineu la funció lògica entre aquestes variables i simplifiqueu-la si escau. [1 punt]
+
+        <br><strong>c)</strong> Dibuixeu l’esquema de portes lògiques equivalent. [0,5 punts]
+        <br><br>
+    `,
+    correctAnswer: "",
+    steps: `
+        <strong>a) Resolució: Taula de veritat</strong>
+        <br>
+        <img src="https://brivera4pompeu.github.io/2024/images/5Serie20082.png" alt="Imatge relacionada amb la pregunta" width="500">
+        <br><br>
+
+        <strong>b) Resolució: Funció lògica</strong>
+        <br>
+        <img src="https://brivera4pompeu.github.io/2024/images/5Serie20083.png" alt="Imatge relacionada amb la pregunta" width="500">
+        <br><br>
+
+        <strong>c) Resolució: Esquema de portes</strong>
+        <br>
+        <img src="https://brivera4pompeu.github.io/2024/images/5Serie20084.png" alt="Imatge relacionada amb la pregunta" width="500">  
+        <br>
+        <img src="ruta/a/imatgeEsquemaPorta.jpg" alt="Esquema de portes lògiques de la porta">
+        <br><br>
+    `
+},
 ];
 
