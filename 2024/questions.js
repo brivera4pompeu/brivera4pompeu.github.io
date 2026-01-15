@@ -1,15 +1,30 @@
 const questions = [
     {
-        type: "questions",
+        type: "questions", // Tipus de pregunta
         category: "electrics",
-        text: `Amb un voltímetre digital es mesura cinc vegades la caiguda de tensió entre els borns d’una pila, i els valors obtinguts són 9,015 V, 9,025 V, 9,000 V, 8,975 V i 8,985 V. Es pot prendre com a resultat de la mesura, amb l’interval d’incertesa corresponent, 9,000 V?`, 
-            options: [
+        text: `Amb un voltímetre digital es mesura cinc vegades la caiguda de tensió entre els borns
+d’una pila, i els valors obtinguts són 9.015 V, 9.025 V, 9,000 V, 8.975 V i 8.985 V. Es pot
+prendre com a resultat de la mesura, amb l’interval d’incertesa corresponent, 9.000 V? 
+`,
+        options: [
             { text: "Sí, perquè és el tercer valor dels cinc obtinguts.", value: "a" },
             { text: "Sí, perquè és la mitjana dels valors obtinguts.", value: "b" },
             { text: "Sí, perquè és el valor més proper a l’última mesura.", value: "c" },
             { text: "Sí, perquè és el valor més proper a la primera mesura.", value: "d" }
         ],
-        correctAnswer: "b",  // No és necessari aquí perquè es tracta d'un exercici obert
+        correctAnswer: "b",
+        steps: `
+            \\[
+            V = \\frac{\\text{9.015+9.025+9.000+8.975+8.985}}{\\text{5}} = frac{\\text{45.000}}{\\text{5}} = 9.000 V
+            \\]
+            \\[	
+            ΔV = frac{\\text{V_màx-V_mín}}{\\text{2}} = frac{\\text{9.025-8.975}}{\\text{2}} = 0.025V
+            \\]
+            \\[
+            V = \\text{(9.000 ± 0.025)}V
+            \\]
+            <br><br>
+            `
     },
     {
         type: "questions", // Tipus de pregunta
