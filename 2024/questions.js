@@ -290,7 +290,7 @@ const questions = [
         <img src="https://brivera4pompeu.github.io/2024/images/2Serie20083" alt="Imatge relacionada amb la pregunta" width="500">
         <br><br>
     `
-}
+},
 {
     type: "exercicis",
     category: "energia",
@@ -338,8 +338,7 @@ const questions = [
         - Cost: \\[ c_2 = m_{gas} \\cdot c = 21,65 \\cdot 0,19 \\approx 4,11 \\, € \\]
         <br><br>
     `
-}
-
+},
 {
     type: "exercicis",
     category: "electrics",
@@ -387,7 +386,7 @@ const questions = [
         - Longitud del fil: \\[ L = \\frac{70 \\cdot 1,767 \\cdot 10^{-8}}{4,9 \\cdot 10^{-7}} \\approx 2,52 \\, m \\]
         <br><br>
     `
-}
+},
 {
     type: "exercicis",
     category: "motors",
@@ -428,7 +427,7 @@ const questions = [
         - Energia dissipada: \\[ E_{diss} = E_{elèctr} - E_s = 115920 - 78000 = 37920 \\, J \\approx 37,92 \\, kJ \\]
         <br><br>
     `
-}
+},
 
 ];
 
