@@ -263,5 +263,54 @@ const questions = [
         \\]
         <br><br>`
 },
+{
+    type: "exercicis",
+    category: "control",
+    text: `
+    Un tendal automàtic està equipat amb un sensor que el plega o el desplega en funció de
+    les condicions meteorològiques. Utilitzant les variables d’estat:
+    <img src="https:brivera4pompeu.github.io/2024/images/2Serie20081.png" alt="Imatge relacionada amb la pregunta" width="900">
+    <br><strong>a)</strong> Escriviu la taula de veritat del sistema. [1 punt]
+    <br><strong>b)</strong> Determineu la funció lògica entre aquestes variables i, si escau, simplifiqueu-la. [1 punt]
+    <br><strong>c)</strong> Dibuixeu l’esquema de contactes equivalent. [0,5 punts]
+    <br><br>
+    `,
+    correctAnswer: "",
+    steps: `
+        <strong>Resolució a) Taula de veritat:</strong>
+        <br>
+        <table border="1">
+        <tr><th>v</th><th>s</th><th>t</th><th>c</th></tr>
+        <tr><td>1</td><td>0</td><td>0</td><td>0</td></tr>
+        <tr><td>1</td><td>0</td><td>1</td><td>1</td></tr>
+        <tr><td>0</td><td>1</td><td>0</td><td>0</td></tr>
+        <tr><td>0</td><td>1</td><td>1</td><td>1</td></tr>
+        <tr><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+        <tr><td>0</td><td>0</td><td>1</td><td>1</td></tr>
+        </table>
+        <br>
+
+        <strong>Resolució b) Funció lògica simplificada:</strong>
+        <br>
+        La funció per al canvi d’estat del tendal \\(c\\) es pot expressar com:
+        <br>
+        \\[
+        c = (v \\cdot t) + (\\overline{v} \\cdot s \\cdot \\overline{t}) + (\\overline{v} \\cdot \\overline{s} \\cdot t)
+        \\]
+        <br>
+        Aquesta expressió indica que el tendal es desplega o plega segons les condicions de vent, radiació solar i estat actual del tendal.
+        <br>
+
+        <strong>Resolució c) Esquema de contactes equivalent:</strong>
+        <br>
+        - **Desplegar:** contactes en sèrie amb \\(\\overline{v}\\) i \\(s\\) i amb \\(t = 1\\) segons condició.
+        <br>
+        - **Plegar:** contactes en paral·lel amb \\(v\\) o \\(\\overline{s}\\) i \\(t = 0\\).
+        <br>
+        Això permet representar el control del tendal mitjançant un circuit de contactes segons les condicions meteorològiques i l’estat actual.
+        <br><br>
+    `
+}
+
 ];
 
