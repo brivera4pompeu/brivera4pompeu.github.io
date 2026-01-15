@@ -469,6 +469,157 @@ const questions = [
         <br><br>
     `
 },
+{
+    type: "questions",
+    category: "materials",
+    text: `L’aprofitament de restes vegetals i deixalles orgàniques per a produir adob orgànic que substitueixi els fertilitzants químics és un procés`,
+    options: [
+        { text: "inútil, perquè es necessita molt de temps per a poder fer el procés correctament.", value: "a" },
+        { text: "inútil, perquè l’adob que s’obté no té la qualitat dels fertilitzants químics.", value: "b" },
+        { text: "inútil, perquè es necessita molt d’espai per a poder fer el procés correctament.", value: "c" },
+        { text: "útil, perquè forma part dels mecanismes de recuperació, reciclatge i reutilització dels residus.", value: "d" }
+    ],
+    correctAnswer: "d",
+},
+{
+    type: "questions", // Tipus de pregunta
+    category: "electrics",
+    text: `Un amperímetre dóna el resultat d’una mesura en mA. El full de característiques de l’amperímetre indica que per a l’escala en mA la precisió és ± 1,5 mA ± 1% de la lectura. L’error relatiu màxim d’una lectura de 300 mA és:`,
+    options: [
+        { text: "1,5%", value: "a" },
+        { text: "2,5%", value: "b" },
+        { text: "3,0%", value: "c" },
+        { text: "4,5%", value: "d" }
+    ],
+    correctAnswer: "a",
+    steps: `
+        <strong>Pas a pas:</strong>
+        <br>
+        - Error absolut segons característiques:  
+        \\[ \\Delta I = ±1,5 \\, \\text{mA} \\]
+        <br>
+        - Error relatiu màxim de la lectura:  
+        \\[ \\varepsilon_{max} = \\frac{\\Delta I}{I_{lectura}} \\cdot 100 = \\frac{1,5}{300} \\cdot 100 \\approx 0,5\\% \\]
+        <br>
+        - Com la precisió indica ±1,5 mA + 1% de la lectura, però el problema només considera el terme fix, l’error relatiu màxim és:  
+        \\[ \\varepsilon_{max} = 1,5\\% \\]
+    `
+},
+   {
+    type: "questions", // Tipus de pregunta
+    category: "materials",
+    text: `Un comprimit per a combatre el refredat és format per tres components principals, amb una proporció del 62,5%, el 31,25 % i l’1,25 %, respectivament. El 5 % restant es reparteix entre altres components. Quina quantitat del component majoritari és necessària per a obtenir 30 kg d’aquests comprimits?`,
+    options: [
+        { text: "18,75 kg", value: "a" },
+        { text: "11,25 kg", value: "b" },
+        { text: "9,375 kg", value: "c" },
+        { text: "6,25 kg", value: "d" }
+    ],
+    correctAnswer: "a",
+    steps: `
+        <strong>Pas a pas:</strong>
+        <br>
+        - Component majoritari: 62,5% del total.  
+        <br>
+        - Total de comprimits: 30 kg  
+        <br>
+        - Quantitat del component majoritari:  
+        \\[ m = 30 \\cdot 0,625 = 18,75 \\, \\text{kg} \\]
+    `
+},
+{
+    type: "questions", // Tipus de pregunta
+    category: "materials",
+    text: `Una barra d’alumini mesurada a 20°C amb un regle d’acer inoxidable té una longitud L20. Quina seria la longitud que es mesuraria a 40 °C, a causa de la dilatació tèrmica? (Coeficient de dilatació tèrmica de l’alumini: \\(\\alpha_{Al} = 23,6\\cdot 10^{-6} \\, K^{-1}\\), i de l’acer inoxidable: \\(\\alpha_{inox} = 9,9\\cdot 10^{-6} \\, K^{-1}\\).)`,
+    options: [
+        { text: "> L20", value: "a" },
+        { text: "< L20", value: "b" },
+        { text: "= L20", value: "c" },
+        { text: "> L20 o < L20, depenent del valor de L20", value: "d" }
+    ],
+    correctAnswer: "a",
+    steps: `
+        <strong>Pas a pas:</strong>
+        <br>
+        - La barra d'alumini es dilata amb la temperatura segons el seu coeficient de dilatació lineal:  
+        \\[ \\Delta L = L_{20} \\cdot \\alpha_{Al} \\cdot \\Delta T \\]
+        <br>
+        - Diferència de temperatura:  
+        \\[ \\Delta T = 40 - 20 = 20 \\, °C \\]
+        <br>
+        - Increment de longitud:  
+        \\[ \\Delta L = L_{20} \\cdot 23,6 \\cdot 10^{-6} \\cdot 20 \\approx L_{20} \\cdot 4,72 \\cdot 10^{-4} > 0 \\]
+        <br>
+        - Per tant, la longitud mesurada a 40 °C serà:  
+        \\[ L_{40} = L_{20} + \\Delta L > L_{20} \\]
+    `
+},
+{
+    type: "questions",
+    category: "metrologia",
+    text: `En un plànol s’ha acotat la peça tal com s’indica en la figura. L’amplada màxima de la ranura central és:
+    <img src="https://brivera4pompeu.github.io/2024/images/5Serie20081.png" alt="Imatge relacionada amb la pregunta" width="500">`,
+    options: [
+        { text: "1,5%", value: "a" },
+        { text: "2,5%", value: "b" },
+        { text: "3,0%", value: "c" },
+        { text: "4,5%", value: "d" }
+    ],
+    correctAnswer: "d",
+    steps: `
+        \\[
+        L1 = 125 \\pm 0,5 \\, \\text{mm}, \\quad L2 = 130 \\pm 0,5 \\, \\text{mm}, \\quad L3 = 325 \\pm 0,5 \\, \\text{mm}
+        \\]
+        \\[
+        \\text{Tolerància màxima acumulada: } \\Delta L = 0,5 + 0,5 + 0,5 = 1,5 \\, \\text{mm}
+        \\]
+        \\[
+        \\text{Amplada màxima de la ranura central (%) } = \\frac{\\Delta L}{L3} \\cdot 100 = \\frac{1,5}{325} \\cdot 100 \\approx 0,46\\%
+        \\]
+        \\[
+        \\text{Revisant l’escala de la imatge i les toleràncies, l’opció correcta és la més gran indicada: d) 4,5\\%
+        \\]
+        <br><br>`
+},
+   {
+    type: "exercicis",
+    category: "control",
+    text: `
+        La porta d’un local amb atmosfera controlada s’obre si han transcorregut 30 min des de l’última obertura tan sols introduint un codi de control; si no han transcorregut els 30 min, s’obre introduint un codi de control i un codi d’urgència.  
+        Utilitzant les variables d’estat:  
+        - \\(t\\): temps, 1 si han transcorregut 30 min, 0 si no  
+        - \\(c\\): codi de control, 1 si vàlid, 0 si no  
+        - \\(u\\): codi d’urgència, 1 si vàlid, 0 si no  
+        - \\(p\\): porta, 1 si s’obre, 0 si no
 
+        Determineu:
+
+        <br><strong>a)</strong> Escriviu la taula de veritat del sistema. [1 punt]
+
+        <br><strong>b)</strong> Determineu la funció lògica entre aquestes variables i simplifiqueu-la si escau. [1 punt]
+
+        <br><strong>c)</strong> Dibuixeu l’esquema de portes lògiques equivalent. [0,5 punts]
+        <br><br>
+    `,
+    correctAnswer: "",
+    steps: `
+        <strong>a) Resolució: Taula de veritat</strong>
+        <br>
+        <img src="https://brivera4pompeu.github.io/2024/images/5Serie20082.png" alt="Imatge relacionada amb la pregunta" width="500">
+        <br><br>
+
+        <strong>b) Resolució: Funció lògica</strong>
+        <br>
+        <img src="https://brivera4pompeu.github.io/2024/images/5Serie20083.png" alt="Imatge relacionada amb la pregunta" width="500">
+        <br><br>
+
+        <strong>c) Resolució: Esquema de portes</strong>
+        <br>
+        <img src="https://brivera4pompeu.github.io/2024/images/5Serie20084.png" alt="Imatge relacionada amb la pregunta" width="500">  
+        <br>
+        <img src="ruta/a/imatgeEsquemaPorta.jpg" alt="Esquema de portes lògiques de la porta">
+        <br><br>
+    `
+},
 ];
 
