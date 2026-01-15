@@ -267,7 +267,7 @@ const questions = [
     text: `
     Un tendal automàtic està equipat amb un sensor que el plega o el desplega en funció de
     les condicions meteorològiques. Utilitzant les variables d’estat:
-    <img src="https://brivera4pompeu.github.io/2024/images/2Serie20081" alt="Imatge relacionada amb la pregunta" width="900">
+    <img src="https://brivera4pompeu.github.io/2024/images/2Serie20081.png" alt="Imatge relacionada amb la pregunta" width="900">
     <br><strong>a)</strong> Escriviu la taula de veritat del sistema. [1 punt]
     <br><strong>b)</strong> Determineu la funció lògica entre aquestes variables i, si escau, simplifiqueu-la. [1 punt]
     <br><strong>c)</strong> Dibuixeu l’esquema de contactes equivalent. [0,5 punts]
@@ -277,17 +277,17 @@ const questions = [
     steps: `
         <strong>Resolució a) Taula de veritat:</strong>
         <br>
-        <img src="https://brivera4pompeu.github.io/2024/images/2Serie20084" alt="Imatge relacionada amb la pregunta" width="500">
+        <img src="https://brivera4pompeu.github.io/2024/images/2Serie20084.png" alt="Imatge relacionada amb la pregunta" width="500">
         <br>
 
         <strong>Resolució b) Funció lògica simplificada:</strong>
         <br>
-        <img src="https://brivera4pompeu.github.io/2024/images/2Serie20085" alt="Imatge relacionada amb la pregunta" width="500">
+        <img src="https://brivera4pompeu.github.io/2024/images/2Serie20085.png" alt="Imatge relacionada amb la pregunta" width="500">
         <br>
 
         <strong>Resolució c) Esquema de contactes equivalent:</strong>
         <br>
-        <img src="https://brivera4pompeu.github.io/2024/images/2Serie20083" alt="Imatge relacionada amb la pregunta" width="500">
+        <img src="https://brivera4pompeu.github.io/2024/images/2Serie20083.png" alt="Imatge relacionada amb la pregunta" width="500">
         <br><br>
     `
 },
@@ -296,7 +296,7 @@ const questions = [
     category: "energia",
     text: `
         Un sistema de calefacció amb gas natural, de poder calorífic \\(p = 39,9 \\, \\text{MJ/kg}\\) i cost 
-        \\(c = 0,19 \\, €/kg\\), escalfa l’aire d’un local de volum \\(V = 750 \\, \\text{m}^3\\). 
+        \\(c = 0,19 \\, Euro/kg\\), escalfa l’aire d’un local de volum \\(V = 750 \\, \\text{m}^3\\). 
         Inicialment, la temperatura del local és la mateixa que la temperatura exterior, \\(t_1 = 10\\,ºC\\), 
         i es vol escalfar fins a \\(t_2 = 23\\,ºC\\).  
         Per a aquest rang de temperatures, la densitat de l’aire és \\(\\rho = 1,2 \\, \\text{kg/m}^3\\), 
@@ -314,29 +314,27 @@ const questions = [
     `,
     correctAnswer: "",
     steps: `
-        <strong>a) Resolució: Cost econòmic \\(c_1\\) sense fuites</strong>
-        <br>
-        - Massa d’aire: \\[ m = \\rho \\cdot V = 1,2 \\cdot 750 = 900 \\, \\text{kg} \\]
-        - Energia necessària: \\[ Q = m \\cdot c_p \\cdot (t_2 - t_1) = 900 \\cdot 1 \\cdot (23-10) = 11700 \\, \\text{kJ} = 11,7 \\, \\text{MJ} \\]
-        - Energia útil del combustible: \\[ E_{comb} = \\frac{Q}{\\eta} = \\frac{11,7}{0,8} = 14,625 \\, \\text{MJ} \\]
-        - Quantitat de combustible: \\[ m_{gas} = \\frac{E_{comb}}{p} = \\frac{14,625}{39,9} \\approx 0,3665 \\, \\text{kg} \\]
-        - Cost: \\[ c_1 = m_{gas} \\cdot c = 0,3665 \\cdot 0,19 \\approx 0,0696 \\, € \\]
-        <br><br>
+       <strong>a) Cost econòmic c1 sense fuites:</strong>
+    <br>
+    - Massa d’aire: \\[ m = \\rho \\cdot V = 1,2 \\cdot 750 = 900 \\, \\text{kg} \\]
+    - Energia necessària: \\[ Q = m \\cdot c_p \\cdot (t_2 - t_1) = 900 \\cdot 1 \\cdot (23-10) = 11700 \\, \\text{kJ} = 11,7 \\, \\text{MJ} \\]
+    - Energia del combustible: \\[ E_{comb} = \\frac{Q}{\\eta} = \\frac{11,7}{0,8} = 14,625 \\, \\text{MJ} \\]
+    - Quantitat de combustible: \\[ m_{gas} = \\frac{E_{comb}}{p} = \\frac{14,625}{39,9} \\approx 0,3665 \\, \\text{kg} \\]
+    - Cost: \\[ c_1 = m_{gas} \\cdot c = 0,3665 \\cdot 0,19 \\approx 0,0696 \\] € 
+    <br><br>
 
         <strong>b) Resolució: Gràfic aproximat de la potència de fuites \\(P_f\\)</strong>
         <br>
-        <img src="https://brivera4pompeu.github.io/2024/images/2Serie20082" alt="Imatge relacionada amb la pregunta" width="500">
+        <img src="https://brivera4pompeu.github.io/2024/images/2Serie20082.png" alt="Imatge relacionada amb la pregunta" width="500">
         <br><br>
 
-        <strong>c) Resolució: Cost econòmic \\(c_2\\) per mantenir calent durant 12 h</strong>
-        <br>
-        - Potència de fuites per \\(t = 13ºC\\): \\( P_f = 1231 \\cdot 13 = 16003 \\, W = 16,003 \\, kW \\)
-        - Energia consumida en 12 h: \\[ E = P_f \\cdot 12 \\text{h} = 16,003 \\cdot 12 = 192,036 \\, kWh \\]  
-        - Convertim a MJ: \\[ E = 192,036 \\cdot 3,6 = 691,33 \\, MJ \\]
-        - Energia útil del combustible: \\[ E_{comb} = \\frac{E}{\\eta} = \\frac{691,33}{0,8} \\approx 864,16 \\, MJ \\]
-        - Quantitat de combustible: \\[ m_{gas} = \\frac{E_{comb}}{p} = \\frac{864,16}{39,9} \\approx 21,65 \\, kg \\]
-        - Cost: \\[ c_2 = m_{gas} \\cdot c = 21,65 \\cdot 0,19 \\approx 4,11 \\, € \\]
-        <br><br>
+        <strong>c) Cost econòmic c2 per mantenir 12 h amb t = 13ºC:</strong>
+    <br>
+    - Potència de fuites: \\[ P_f = k \\cdot t = 1231 \\cdot 13 = 16003 \\, \\text{W} = 16,003 \\, \\text{kW} \\]
+    - Energia consumida en 12 h: \\[ E = P_f \\cdot t = 16,003 \\cdot 12 = 192,036 \\, \\text{kWh} \\]
+    - Convertim kWh a MJ: \\[ 192,036 \\cdot 3,6 \\approx 691,33 \\, \\text{MJ} \\]
+    - Quantitat de combustible: \\[ m_{gas} = \\frac{691,33}{39,9} \\approx 17,33 \\, \\text{kg} \\]
+    - Cost: \\[ c_2 = m_{gas} \\cdot c = 17,33 \\cdot 0,19 \\approx 3,29 \\] € 
     `
 },
 {
@@ -428,6 +426,47 @@ const questions = [
         <br><br>
     `
 },
+{
+    type: "exercicis",
+    category: "maquines",
+    text: `
+        <img src="https://brivera4pompeu.github.io/2024/images/2Serie20083.png" alt="Imatge relacionada amb la pregunta" width="500">
+        La finestra horitzontal es manté oberta mitjançant la corda AC, que en la posició indicada, 
+        \\(\\alpha = 30º\\), queda perpendicular a AB (la finestra). La finestra té una massa \\(m = 9 \\, kg\\) 
+        i longitud \\(L_2 = 0,82 \\, m\\). La corda està unida a un punt A a \\(L_1 = 0,4 \\, m\\) de la frontissa B.
 
+        Determineu:
+
+        <br><strong>a)</strong> La longitud \\(L_c\\) de la corda AC. [0,5 punts]
+
+        <br><strong>b)</strong> La força \\(F\\) que fa la corda. [1 punt]
+
+        <br><strong>c)</strong> La força vertical \\(F_v\\) i horitzontal \\(F_h\\) que fa la frontissa. [1 punt]
+        <br><br>
+    `,
+    correctAnswer: "",
+    steps: `
+        <strong>a) Resolució: Longitud de la corda \\(L_c\\)</strong>
+        <br>
+        - Utilitzant trigonometria amb la tangent de l’angle:  
+        \\[ L_c = L_2 \\cdot \\tan(\\alpha) = 0,82 \\cdot \\tan(30°) \\approx 0,4734 \\, m = 473,4 \\, mm \\]
+        <br><br>
+
+        <strong>b) Resolució: Força de la corda \\(F\\)</strong>
+        <br>
+        - Sumant moments al voltant de B i aplicant l’equilibri:  
+        \\[ F = 37,29 \\, N \\]
+        <br><br>
+
+        <strong>c) Resolució: Forces de la frontissa \\(F_v\\) i \\(F_h\\)</strong>
+        <br>
+        - Equilibri vertical:  
+        \\[ F_v = -55,97 \\, N \\]  
+          *(negatiu indica que la força vertical apunta cap avall)*  
+        - Equilibri horitzontal:  
+        \\[ F_h = 18,64 \\, N \\]
+        <br><br>
+    `
+},
 ];
 
