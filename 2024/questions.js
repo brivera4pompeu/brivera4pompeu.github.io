@@ -716,16 +716,16 @@ const questions = [
     category: "energia",
     text: `
         Una bomba elèctrica emprada per a elevar aigua per a regar un petit hort té les característiques nominals següents:  
-        - Cabal: \\(q = 75 \\, \\text{l/min}\\)  
-        - Pressió: \\(p = 0,56 \\, \\text{MPa}\\)  
-        - Rendiment del motor: \\(\\eta_{mot} = 0,8\\)  
-        - Potència del motor a \\(n = 2850 \\, \\text{min⁻¹}\\): \\(P_{mot} = 950 \\, \\text{W}\\)  
-        - Cost de l’energia elèctrica: \\(c = 0,10 \\, €/\\text{kWh}\\)
+        - Cabal: 75 l/min  
+        - Pressió: 0,56 MPa  
+        - Rendiment del motor: 0,8  
+        - Potència del motor a n = 2850 min⁻¹: 950 W  
+        - Cost de l’energia elèctrica: 0,10 €/kWh
 
         Determineu:
 
         <br><strong>a)</strong> Rendiment de la bomba. [1 punt]  
-        <br><strong>b)</strong> Quantitat \\(V\\) d’aigua elevada en \\(t = 3 \\, h\\). [0,5 punts]  
+        <br><strong>b)</strong> Quantitat d’aigua elevada en 3 h. [0,5 punts]  
         <br><strong>c)</strong> Cost econòmic de l’energia elèctrica consumida per m³ d’aigua elevada. [1 punt]
         <br><br>
     `,
@@ -734,23 +734,22 @@ const questions = [
         <strong>a) Rendiment de la bomba</strong>
         <br>
         - Potència hidràulica:  
-        \\[ P_h = q \\cdot p = 75 \\frac{l}{min} \\cdot 0,56 \\text{MPa} \\]  
-        Convertim unitats: 75 l/min = 0,00125 m³/s, 0,56 MPa = 560000 Pa  
-        \\[ P_h = 0,00125 \\cdot 560000 = 700 \\, W \\]  
+        \\[ P_h = q \\cdot p = 0,00125 \\cdot 560000 = 700 \\, \\text{W} \\]  
         - Rendiment de la bomba:  
         \\[ \\eta_{bomba} = \\frac{P_h}{P_{mot}} = \\frac{700}{950} \\approx 0,7368 \\]
 
         <br><strong>b) Quantitat d’aigua elevada</strong>
         <br>
-        - Temps de funcionament: \\( t = 3 \\, h = 180 \\, min \\)  
-        - Cabal total: \\( V = q \\cdot t = 75 \\, \\text{l/min} \\cdot 180 \\, \\text{min} = 13500 \\, \\text{l} \\)
+        - Temps de funcionament: t = 3 h = 180 min  
+        - Cabal total:  
+        \\[ V = q \\cdot t = 75 \\cdot 180 = 13500 \\, \\text{l} \\]
 
         <br><strong>c) Cost econòmic per m³</strong>
         <br>
-        - Energia consumida: \\( E = P_{mot} \\cdot t = 950 \\, \\text{W} \\cdot 3 \\, h = 2850 \\, \\text{Wh} = 2,85 \\, \\text{kWh} \\)  
-        - Convertim volum a m³: \\( V = 13500 \\, \\text{l} = 13,5 \\, \\text{m³} \\)  
+        - Energia consumida: E = 950 W · 3 h = 2850 Wh = 2,85 kWh  
+        - Volum en m³: V = 13500 l = 13,5 m³  
         - Cost per m³:  
-        \\[ c_e = \\frac{E \\cdot c}{V} = \\frac{2,85 \\cdot 0,10}{13,5} \\approx 0,02639 \\, €/\\text{m³} \\]
+        2,85 kWh · 0,10 €/kWh ÷ 13,5 m³ ≈ 0,02639 €/m³
     `
 },
 {
