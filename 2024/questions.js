@@ -583,45 +583,5 @@ const questions = [
         \\]
         <br><br>`
 },
-{
-    type: "exercicis",
-    category: "control",
-    text: `
-        La porta d’un local amb atmosfera controlada s’obre si han transcorregut 30 min des de l’última obertura tan sols introduint un codi de control; si no han transcorregut els 30 min, s’obre introduint un codi de control i un codi d’urgència.  
-        Utilitzant les variables d’estat:  
-        - \\(t\\): temps, 1 si han transcorregut 30 min, 0 si no  
-        - \\(c\\): codi de control, 1 si vàlid, 0 si no  
-        - \\(u\\): codi d’urgència, 1 si vàlid, 0 si no  
-        - \\(p\\): porta, 1 si s’obre, 0 si no
-
-        Determineu:
-
-        <br><strong>a)</strong> Escriviu la taula de veritat del sistema. [1 punt]
-
-        <br><strong>b)</strong> Determineu la funció lògica entre aquestes variables i simplifiqueu-la si escau. [1 punt]
-
-        <br><strong>c)</strong> Dibuixeu l’esquema de portes lògiques equivalent. [0,5 punts]
-        <br><br>
-    `,
-    correctAnswer: "",
-    steps: `
-        <strong>a) Resolució: Taula de veritat</strong>
-        <br>
-        <img src="https://brivera4pompeu.github.io/2024/images/5Serie20082.png" alt="Imatge relacionada amb la pregunta" width="500">
-        <br><br>
-
-        <strong>b) Resolució: Funció lògica</strong>
-        <br>
-        <img src="https://brivera4pompeu.github.io/2024/images/5Serie20083.png" alt="Imatge relacionada amb la pregunta" width="500">
-        <br><br>
-
-        <strong>c) Resolució: Esquema de portes</strong>
-        <br>
-        <img src="https://brivera4pompeu.github.io/2024/images/5Serie20084.png" alt="Imatge relacionada amb la pregunta" width="500">  
-        <br>
-        <img src="ruta/a/imatgeEsquemaPorta.jpg" alt="Esquema de portes lògiques de la porta">
-        <br><br>
-    `
-},
 ];
 
