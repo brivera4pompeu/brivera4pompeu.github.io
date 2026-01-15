@@ -13,18 +13,18 @@ prendre com a resultat de la mesura, amb l’interval d’incertesa corresponent
             { text: "Sí, perquè és el valor més proper a la primera mesura.", value: "d" }
         ],
         correctAnswer: "b",
-        steps: `
+        steps:`
             \\[
-            \\V = \\frac{\\text{9.015+9.025+9.000+8.975+8.985}}{\\text{5}} = frac{\\text{45.000}}{\\text{5}} = 9.000 V
+            V \\, \\frac{\\text{rev}}{\\text{min}} \\cdot \\frac{1 \\, \\text{min}}{60 \\, \\text{seg}}  = 10 \\, \\frac{\\text{rev}}{\\text{seg}}
             \\]
             \\[	
-            \\ΔV = frac{\\text{V_màx-V_mín}}{\\text{2}} = frac{\\text{9.025-8.975}}{\\text{2}} = 0.025V
+            ΔV  = \\frac{\\text{V_màx-V_mín}{\\text{2}} \\; \\frac{\\text{9.025-8.975}}{\\text{2}}  \\; = \\text{0.025V}
             \\]
             \\[
-            \\V = \\text{(9.000 ± 0.025)}V
+            V = 9.000 ± 0.025 \\, V
             \\]
             <br><br>
-            `
+            `           
     },
     {
         type: "questions", // Tipus de pregunta
