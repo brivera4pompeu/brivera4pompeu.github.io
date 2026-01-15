@@ -316,6 +316,7 @@ const questions = [
     steps: `
         <strong>a) Resolució: Cost econòmic \\(c_1\\) sense fuites</strong>
         <br>
+         <img src="https://brivera4pompeu.github.io/2024/images/2Serie20086" alt="Imatge relacionada amb la pregunta" width="500">
         - Massa d’aire: \\[ m = \\rho \\cdot V = 1,2 \\cdot 750 = 900 \\, \\text{kg} \\]
         - Energia necessària: \\[ Q = m \\cdot c_p \\cdot (t_2 - t_1) = 900 \\cdot 1 \\cdot (23-10) = 11700 \\, \\text{kJ} = 11,7 \\, \\text{MJ} \\]
         - Energia útil del combustible: \\[ E_{comb} = \\frac{Q}{\\eta} = \\frac{11,7}{0,8} = 14,625 \\, \\text{MJ} \\]
@@ -335,6 +336,95 @@ const questions = [
         - Energia útil del combustible: \\[ E_{comb} = \\frac{E}{\\eta} = \\frac{691,33}{0,8} \\approx 864,16 \\, MJ \\]
         - Quantitat de combustible: \\[ m_{gas} = \\frac{E_{comb}}{p} = \\frac{864,16}{39,9} \\approx 21,65 \\, kg \\]
         - Cost: \\[ c_2 = m_{gas} \\cdot c = 21,65 \\cdot 0,19 \\approx 4,11 \\, € \\]
+        <br><br>
+    `
+}
+{
+    type: "exercicis",
+    category: "electrics",
+    text: `
+        Un eixugador de cabells té un commutador per a seleccionar la potència que subministra.
+        El circuit elèctric està format per dues resistències iguals de valor \\(R = 70 \\, \\Omega\\) i alimentat a \\(U = 230 \\, V\\).
+
+        Determineu:
+
+        <br><strong>a)</strong> La resistència mínima \\(R_{mín}\\) del circuit. [0,5 punts]
+
+        <br><strong>b)</strong> El corrent \\(I\\) consumit per l’eixugador quan la resistència és mínima. [0,5 punts]
+
+        <br><strong>c)</strong> El valor de les dues potències, \\(P_1\\) i \\(P_2\\), que pot proporcionar l’eixugador. [1 punt]
+
+        <br><strong>d)</strong> La longitud \\(L\\) del fil d’una resistència, tenint en compte que les resistències són fetes
+        amb fil de constantà de diàmetre \\(d = 0,15 \\, mm\\) i resistivitat \\(\\rho = 4,9 \\cdot 10^{-7} \\, \\Omega \\cdot m\\). [0,5 punts]
+        <br><br>
+    `,
+    correctAnswer: "",
+    steps: `
+        <strong>a) Resolució: Resistència mínima \\(R_{mín}\\)</strong>
+        <br>
+        - Com que les dues resistències són iguals i es poden posar en paral·lel:  
+        \\[ R_{mín} = \\frac{R \\cdot R}{R + R} = \\frac{70 \\cdot 70}{70 + 70} = \\frac{4900}{140} = 35 \\, \\Omega \\]
+        <br><br>
+
+        <strong>b) Resolució: Corrent consumit \\(I\\) amb resistència mínima</strong>
+        <br>
+        - Utilitzant la llei d’Ohm: \\[ I = \\frac{U}{R_{mín}} = \\frac{230}{35} \\approx 6,57 \\, A \\]
+        <br><br>
+
+        <strong>c) Resolució: Potències \\(P_1\\) i \\(P_2\\)</strong>
+        <br>
+        \\[ P_1 = \\frac{U^2}{R_{mín}} = \\frac{230^2}{35} = \\frac{52900}{35} \\approx 1511,4 \\, W \\]
+        - Potència amb una resistència sola (en sèrie o posició 1):  
+        \\[ P_2 = \\frac{U^2}{R} = \\frac{230^2}{70} = \\frac{52900}{70} \\approx 755,7 \\, W \\]  
+        - Potència amb les dues resistències en paral·lel:  
+        <br><br>
+        
+        <strong>d) Resolució: Longitud del fil \\(L\\)</strong>
+        <br>
+        - Fórmula de resistència d’un fil: \\[ R = \\rho \\frac{L}{S} \\Rightarrow L = \\frac{R \\cdot S}{\\rho} \\]  
+        - Secció transversal del fil: \\[ S = \\pi \\left(\\frac{d}{2}\\right)^2 = \\pi \\left(\\frac{0,15 \\cdot 10^{-3}}{2}\\right)^2 \\approx 1,767 \\cdot 10^{-8} \\, m^2 \\]  
+        - Longitud del fil: \\[ L = \\frac{70 \\cdot 1,767 \\cdot 10^{-8}}{4,9 \\cdot 10^{-7}} \\approx 2,52 \\, m \\]
+        <br><br>
+    `
+}
+{
+    type: "exercicis",
+    category: "motors",
+    text: `
+        Pel motor d’un trepant elèctric alimentat a \\(U = 230 \\, V\\) circula un corrent \\(I = 4,2 \\, A\\). 
+        En règim de funcionament nominal, proporciona a l’eix de sortida, que gira a \\(n = 3000 \\, \\text{min}^{-1}\\), 
+        una potència \\(P_s = 650 \\, W\\).
+
+        Determineu:
+
+        <br><strong>a)</strong> El parell \\(T_s\\) a l’eix de sortida. [0,5 punts]
+
+        <br><strong>b)</strong> El rendiment electromecànic \\(\\eta\\) del trepant. [1 punt]
+
+        <br><strong>c)</strong> L’energia elèctrica consumida \\(E_{elèctr}\\) i l’energia dissipada \\(E_{diss}\\) si es fa funcionar durant un temps \\(t = 2 \\, min\\).
+        <br><br>
+    `,
+    correctAnswer: "",
+    steps: `
+        <strong>a) Resolució: Parell a l’eix \\(T_s\\)</strong>
+        <br>
+        - Convertim la velocitat angular a rad/s:  
+        \\[ \\omega = \\frac{2 \\pi n}{60} = \\frac{2 \\pi \\cdot 3000}{60} = 314,16 \\, \\text{rad/s} \\]
+        - Parell: \\[ T_s = \\frac{P_s}{\\omega} = \\frac{650}{314,16} \\approx 2,07 \\, \\text{N·m} \\]
+        <br><br>
+
+        <strong>b) Resolució: Rendiment electromecànic \\(\\eta\\)</strong>
+        <br>
+        - Potència elèctrica absorbida: \\[ P_{el} = U \\cdot I = 230 \\cdot 4,2 = 966 \\, W \\]
+        - Rendiment: \\[ \\eta = \\frac{P_s}{P_{el}} = \\frac{650}{966} \\approx 0,673 \\approx 67,3\\% \\]
+        <br><br>
+
+        <strong>c) Resolució: Energia consumida i dissipació</strong>
+        <br>
+        - Temps en segons: \\( t = 2 \\cdot 60 = 120 \\, s \\)  
+        - Energia elèctrica consumida: \\[ E_{elèctr} = P_{el} \\cdot t = 966 \\cdot 120 = 115920 \\, J \\approx 115,92 \\, kJ \\]
+        - Energia mecànica útil: \\[ E_s = P_s \\cdot t = 650 \\cdot 120 = 78000 \\, J \\approx 78,0 \\, kJ \\]
+        - Energia dissipada: \\[ E_{diss} = E_{elèctr} - E_s = 115920 - 78000 = 37920 \\, J \\approx 37,92 \\, kJ \\]
         <br><br>
     `
 }
