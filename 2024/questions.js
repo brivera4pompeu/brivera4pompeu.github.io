@@ -213,10 +213,13 @@ const questions = [
         \\[
         t = \\frac{L}{v} = \\frac{10}{50} = 0.2 \\, \\text{h}
         \\]
+        \\[
         \\text{Cost del temps: } C_{temps} = 8.4 \\times 0.2 = 1.68
         \\]
+        \\[
         \\text{Cost total: } C_{total} = 3.68
         \\]
+        \\[
         \\text{Cost directe: } C_{directe} = C_{total} - C_{temps} = 3.68 - 1.68 = 2.00
         \\]
         \\[
